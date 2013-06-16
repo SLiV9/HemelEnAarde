@@ -26,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="164.71758"
-     inkscape:cy="650.20783"
+     inkscape:cx="218.86275"
+     inkscape:cy="733.99932"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer8"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1028"
@@ -56,7 +56,8 @@
   <g
      inkscape:label="Grass"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#e2eeaf;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -884,7 +885,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="River">
+     inkscape:label="River"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#d5eef8;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -1032,7 +1034,8 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Forest"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#8ed889;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -1231,7 +1234,8 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Mountain"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#c6a872;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -1313,7 +1317,8 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Sand"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#f5f294;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -1475,9 +1480,28 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="City Wall">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.4000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 207.4477,529.27044 26.16071,-14.82143 26.25,14.91072 25.98215,-15.17857 25.98214,15.26785 25.89286,-15.17857 25.89285,15 26.33929,-14.82143 25.71429,14.55358 26.33928,-14.82143 26.16072,15.08928 25.80357,-15.17857 26.07143,15.08929"
+       id="path7162"
+       inkscape:connector-curvature="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path7162"
+       id="use7171"
+       transform="matrix(1,0,0,-1,0.18871122,642.22657)"
+       width="744.09448"
+       height="1052.3622" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="City"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        sodipodi:type="star"
        style="fill:#c7674b;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -1541,15 +1565,6 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-52"
        xlink:href="#path3007-52"
-       transform="translate(166.65305,-622.04087)"
-       id="use5349-2"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       inkscape:tiled-clone-of="#path3007-52"
-       xlink:href="#path3007-52"
        transform="translate(244.68366,-667.09187)"
        id="use5371-3"
        width="744.09448"
@@ -1586,15 +1601,6 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-52"
        xlink:href="#path3007-52"
-       transform="translate(166.65305,-261.63294)"
-       id="use5461-1"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       inkscape:tiled-clone-of="#path3007-52"
-       xlink:href="#path3007-52"
        transform="translate(140.64285,-216.58195)"
        id="use5463-1"
        width="744.09448"
@@ -1624,6 +1630,35 @@
        xlink:href="#path3007-52"
        transform="translate(296.70406,-216.58195)"
        id="use5517-2"
+       width="744.09448"
+       height="1052.3622" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="Gates">
+    <path
+       sodipodi:type="star"
+       style="fill:#c7674b;fill-opacity:1;stroke:none"
+       id="path7167"
+       sodipodi:sides="6"
+       sodipodi:cx="331.07751"
+       sodipodi:cy="641.73517"
+       sodipodi:r1="43.154476"
+       sodipodi:r2="37.372871"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.0471976"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 368.45039,663.31241 -37.37288,21.57723 -37.37287,-21.57723 0,-43.15448 37.37287,-21.57724 37.37288,21.57724 z"
+       transform="matrix(0.51110806,0,0,0.51110806,194.50319,173.62315)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path7167"
+       id="use7169"
+       transform="translate(-0.26785711,-360.01083)"
        width="744.09448"
        height="1052.3622" />
   </g>
