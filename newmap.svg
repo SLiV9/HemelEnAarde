@@ -26,17 +26,18 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="218.86275"
-     inkscape:cy="733.99932"
+     inkscape:cx="168.91949"
+     inkscape:cy="762.72437"
      inkscape:document-units="px"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer9"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1028"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:snap-global="false">
+     inkscape:snap-global="false"
+     showguides="true">
     <inkscape:grid
        type="xygrid"
        id="grid6109" />
@@ -1394,7 +1395,7 @@
      style="display:inline">
     <path
        sodipodi:type="star"
-       style="fill:#175e1e;fill-opacity:0;stroke:#393939;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#175e1e;fill-opacity:0;stroke:#393939;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path3007-5"
        sodipodi:sides="6"
        sodipodi:cx="47.142857"
@@ -1413,13 +1414,13 @@
        inkscape:tile-h="60.067989"
        inkscape:tile-x0="21.132654"
        inkscape:tile-y0="12.328188"
-       transform="translate(80.698995,719.61735)" />
+       transform="translate(83.556138,718.90306)" />
     <use
        x="0"
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(209.92856,-485.81646)"
+       transform="translate(207.07142,-485.10217)"
        id="use5379-5"
        width="744.09448"
        height="1052.3622" />
@@ -1428,7 +1429,7 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(183.91835,-440.76547)"
+       transform="translate(181.06121,-440.05118)"
        id="use5381-2"
        width="744.09448"
        height="1052.3622" />
@@ -1437,7 +1438,7 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(261.94896,-485.81646)"
+       transform="translate(259.09182,-485.10217)"
        id="use5403-6"
        width="744.09448"
        height="1052.3622" />
@@ -1446,7 +1447,7 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(235.93876,-440.76547)"
+       transform="translate(233.08162,-440.05118)"
        id="use5405-6"
        width="744.09448"
        height="1052.3622" />
@@ -1455,7 +1456,7 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(209.92856,-395.71448)"
+       transform="translate(207.07142,-395.00019)"
        id="use5407-2"
        width="744.09448"
        height="1052.3622" />
@@ -1464,7 +1465,7 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(287.95916,-440.76547)"
+       transform="translate(285.10202,-440.05118)"
        id="use5429-8"
        width="744.09448"
        height="1052.3622" />
@@ -1473,7 +1474,7 @@
        y="0"
        inkscape:tiled-clone-of="#path3007-5"
        xlink:href="#path3007-5"
-       transform="translate(261.94896,-395.71448)"
+       transform="translate(259.09182,-395.00019)"
        id="use5431-2"
        width="744.09448"
        height="1052.3622" />
@@ -1481,7 +1482,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer8"
-     inkscape:label="City Wall">
+     inkscape:label="City Wall"
+     style="display:none">
     <path
        style="fill:none;stroke:#000000;stroke-width:3.4000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 207.4477,529.27044 26.16071,-14.82143 26.25,14.91072 25.98215,-15.17857 25.98214,15.26785 25.89286,-15.17857 25.89285,15 26.33929,-14.82143 25.71429,14.55358 26.33928,-14.82143 26.16072,15.08928 25.80357,-15.17857 26.07143,15.08929"
@@ -1500,11 +1502,10 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="City"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        sodipodi:type="star"
-       style="fill:#c7674b;fill-opacity:1;stroke:#494949;stroke-opacity:1"
+       style="fill:#c7674b;fill-opacity:1;stroke:#343434;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
        id="path3007-52"
        sodipodi:sides="6"
        sodipodi:cx="47.142857"
@@ -1636,10 +1637,11 @@
   <g
      inkscape:groupmode="layer"
      id="layer9"
-     inkscape:label="Gates">
+     inkscape:label="Gates"
+     style="display:inline">
     <path
        sodipodi:type="star"
-       style="fill:#c7674b;fill-opacity:1;stroke:none"
+       style="fill:none;stroke:#c7674b;stroke-width:15.54198265000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
        id="path7167"
        sodipodi:sides="6"
        sodipodi:cx="331.07751"
@@ -1652,13 +1654,13 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 368.45039,663.31241 -37.37288,21.57723 -37.37287,-21.57723 0,-43.15448 37.37287,-21.57724 37.37288,21.57724 z"
-       transform="matrix(0.51110806,0,0,0.51110806,194.50319,173.62315)" />
+       transform="matrix(0.3887535,0,0,0.3887535,234.87123,251.60666)" />
     <use
        x="0"
        y="0"
        xlink:href="#path7167"
        id="use7169"
-       transform="translate(-0.26785711,-360.01083)"
+       transform="translate(0.25099848,-359.77711)"
        width="744.09448"
        height="1052.3622" />
   </g>
