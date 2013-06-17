@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="newmap.svg">
+   sodipodi:docname="newmap.svg"
+   inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\newmap.png"
+   inkscape:export-xdpi="182.45503"
+   inkscape:export-ydpi="182.45503">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -29,7 +32,7 @@
      inkscape:cx="123.97731"
      inkscape:cy="754.81696"
      inkscape:document-units="px"
-     inkscape:current-layer="layer11"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1028"
@@ -57,8 +60,7 @@
   <g
      inkscape:label="Grass"
      inkscape:groupmode="layer"
-     id="layer1"
-     sodipodi:insensitive="true">
+     id="layer1">
     <path
        sodipodi:type="star"
        style="fill:#e2eeaf;fill-opacity:1;stroke:#494949;stroke-opacity:1"
@@ -89,7 +91,10 @@
        transform="translate(173.0306,-666.37758)"
        id="use5275"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -98,7 +103,10 @@
        transform="translate(147.0204,-621.32658)"
        id="use5277"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -107,7 +115,10 @@
        transform="translate(121.0102,-576.27559)"
        id="use5279"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -116,7 +127,10 @@
        transform="translate(94.999994,-531.2246)"
        id="use5281"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -125,7 +139,10 @@
        transform="translate(68.989799,-486.17361)"
        id="use5283"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -134,7 +151,10 @@
        transform="translate(225.05101,-666.37758)"
        id="use5299"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -143,7 +163,10 @@
        transform="translate(199.04081,-621.32658)"
        id="use5301"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -152,7 +175,10 @@
        transform="translate(173.0306,-576.27559)"
        id="use5303"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -161,7 +187,10 @@
        transform="translate(147.0204,-531.2246)"
        id="use5305"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -170,7 +199,10 @@
        transform="translate(121.0102,-486.17361)"
        id="use5307"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -179,7 +211,10 @@
        transform="translate(94.999994,-441.12262)"
        id="use5309"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -188,7 +223,10 @@
        transform="translate(68.989799,-396.07163)"
        id="use5311"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -197,7 +235,10 @@
        transform="translate(277.07142,-666.37758)"
        id="use5323"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -206,7 +247,10 @@
        transform="translate(251.06121,-621.32658)"
        id="use5325"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -215,7 +259,10 @@
        transform="translate(225.05101,-576.27559)"
        id="use5327"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -224,7 +271,10 @@
        transform="translate(199.04081,-531.2246)"
        id="use5329"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -233,7 +283,10 @@
        transform="translate(173.0306,-486.17361)"
        id="use5331"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -242,7 +295,10 @@
        transform="translate(147.0204,-441.12262)"
        id="use5333"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -251,7 +307,10 @@
        transform="translate(121.0102,-396.07163)"
        id="use5335"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -260,7 +319,10 @@
        transform="translate(94.999994,-351.02064)"
        id="use5337"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -269,7 +331,10 @@
        transform="translate(329.09182,-666.37758)"
        id="use5347"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -278,7 +343,10 @@
        transform="translate(303.08162,-621.32658)"
        id="use5349"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -287,7 +355,10 @@
        transform="translate(277.07142,-576.27559)"
        id="use5351"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -296,7 +367,10 @@
        transform="translate(251.06121,-531.2246)"
        id="use5353"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -305,7 +379,10 @@
        transform="translate(225.05101,-486.17361)"
        id="use5355"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -314,7 +391,10 @@
        transform="translate(199.04081,-441.12262)"
        id="use5357"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -323,7 +403,10 @@
        transform="translate(173.0306,-396.07163)"
        id="use5359"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -332,7 +415,10 @@
        transform="translate(147.0204,-351.02064)"
        id="use5361"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -341,7 +427,10 @@
        transform="translate(121.0102,-305.96964)"
        id="use5363"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -350,7 +439,10 @@
        transform="translate(381.11223,-666.37758)"
        id="use5371"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -359,7 +451,10 @@
        transform="translate(355.10202,-621.32658)"
        id="use5373"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -368,7 +463,10 @@
        transform="translate(329.09182,-576.27559)"
        id="use5375"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -377,7 +475,10 @@
        transform="translate(303.08162,-531.2246)"
        id="use5377"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -386,7 +487,10 @@
        transform="translate(277.07142,-486.17361)"
        id="use5379"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -395,7 +499,10 @@
        transform="translate(251.06121,-441.12262)"
        id="use5381"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -404,7 +511,10 @@
        transform="translate(225.05101,-396.07163)"
        id="use5383"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -413,7 +523,10 @@
        transform="translate(199.04081,-351.02064)"
        id="use5385"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -422,7 +535,10 @@
        transform="translate(173.0306,-305.96964)"
        id="use5387"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -431,7 +547,10 @@
        transform="translate(147.0204,-260.91865)"
        id="use5389"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -440,7 +559,10 @@
        transform="translate(433.13263,-666.37758)"
        id="use5395"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -449,7 +571,10 @@
        transform="translate(407.12243,-621.32658)"
        id="use5397"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -458,7 +583,10 @@
        transform="translate(381.11223,-576.27559)"
        id="use5399"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -467,7 +595,10 @@
        transform="translate(355.10202,-531.2246)"
        id="use5401"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -476,7 +607,10 @@
        transform="translate(329.09182,-486.17361)"
        id="use5403"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -485,7 +619,10 @@
        transform="translate(303.08162,-441.12262)"
        id="use5405"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -494,7 +631,10 @@
        transform="translate(277.07142,-396.07163)"
        id="use5407"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -503,7 +643,10 @@
        transform="translate(251.06121,-351.02064)"
        id="use5409"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -512,7 +655,10 @@
        transform="translate(225.05101,-305.96964)"
        id="use5411"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -521,7 +667,10 @@
        transform="translate(199.04081,-260.91865)"
        id="use5413"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -530,7 +679,10 @@
        transform="translate(173.0306,-215.86766)"
        id="use5415"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -539,7 +691,10 @@
        transform="translate(459.14283,-621.32658)"
        id="use5421"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -548,7 +703,10 @@
        transform="translate(433.13263,-576.27559)"
        id="use5423"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -557,7 +715,10 @@
        transform="translate(407.12243,-531.2246)"
        id="use5425"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -566,7 +727,10 @@
        transform="translate(381.11223,-486.17361)"
        id="use5427"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -575,7 +739,10 @@
        transform="translate(355.10202,-441.12262)"
        id="use5429"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -584,7 +751,10 @@
        transform="translate(329.09182,-396.07163)"
        id="use5431"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -593,7 +763,10 @@
        transform="translate(303.08162,-351.02064)"
        id="use5433"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -602,7 +775,10 @@
        transform="translate(277.07142,-305.96964)"
        id="use5435"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -611,7 +787,10 @@
        transform="translate(251.06121,-260.91865)"
        id="use5437"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -620,7 +799,10 @@
        transform="translate(225.05101,-215.86766)"
        id="use5439"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -629,7 +811,10 @@
        transform="translate(485.15304,-576.27559)"
        id="use5447"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -638,7 +823,10 @@
        transform="translate(459.14283,-531.2246)"
        id="use5449"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -647,7 +835,10 @@
        transform="translate(433.13263,-486.17361)"
        id="use5451"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -656,7 +847,10 @@
        transform="translate(407.12243,-441.12262)"
        id="use5453"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -665,7 +859,10 @@
        transform="translate(381.11223,-396.07163)"
        id="use5455"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -674,7 +871,10 @@
        transform="translate(355.10202,-351.02064)"
        id="use5457"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -683,7 +883,10 @@
        transform="translate(329.09182,-305.96964)"
        id="use5459"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -692,7 +895,10 @@
        transform="translate(303.08162,-260.91865)"
        id="use5461"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -701,7 +907,10 @@
        transform="translate(277.07142,-215.86766)"
        id="use5463"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -710,7 +919,10 @@
        transform="translate(511.16324,-531.2246)"
        id="use5471"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -719,7 +931,10 @@
        transform="translate(485.15304,-486.17361)"
        id="use5473"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -728,7 +943,10 @@
        transform="translate(459.14283,-441.12262)"
        id="use5475"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -737,7 +955,10 @@
        transform="translate(433.13263,-396.07163)"
        id="use5477"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -746,7 +967,10 @@
        transform="translate(407.12243,-351.02064)"
        id="use5479"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -755,7 +979,10 @@
        transform="translate(381.11223,-305.96964)"
        id="use5481"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -764,7 +991,10 @@
        transform="translate(355.10202,-260.91865)"
        id="use5483"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -773,7 +1003,10 @@
        transform="translate(329.09182,-215.86766)"
        id="use5485"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -782,7 +1015,10 @@
        transform="translate(537.17344,-486.17361)"
        id="use5491"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -791,7 +1027,10 @@
        transform="translate(511.16324,-441.12262)"
        id="use5493"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -800,7 +1039,10 @@
        transform="translate(485.15304,-396.07163)"
        id="use5495"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -809,7 +1051,10 @@
        transform="translate(459.14283,-351.02064)"
        id="use5497"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -818,7 +1063,10 @@
        transform="translate(433.13263,-305.96964)"
        id="use5499"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -827,7 +1075,10 @@
        transform="translate(407.12243,-260.91865)"
        id="use5501"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -836,7 +1087,10 @@
        transform="translate(381.11223,-215.86766)"
        id="use5503"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -845,7 +1099,10 @@
        transform="translate(537.17344,-396.07163)"
        id="use5509"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -854,7 +1111,10 @@
        transform="translate(511.16324,-351.02064)"
        id="use5511"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -863,7 +1123,10 @@
        transform="translate(485.15304,-305.96964)"
        id="use5513"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -872,7 +1135,10 @@
        transform="translate(459.14283,-260.91865)"
        id="use5515"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -881,7 +1147,10 @@
        transform="translate(433.13263,-215.86766)"
        id="use5517"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1712,7 +1981,10 @@
        sodipodi:rx="13.348214"
        sodipodi:ry="13.348214"
        d="m 380.26786,501.24612 a 13.348214,13.348214 0 1 1 -26.69643,0 13.348214,13.348214 0 1 1 26.69643,0 z"
-       transform="translate(-2.9464286,-0.80357143)" />
+       transform="translate(-2.9464286,-0.80357143)"
+       inkscape:export-filename="C:\Users\SLiV\Dropbox\Hemel en Aarde\HemelEnAarde\use7241.png"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
     <use
        x="0"
        y="0"
@@ -1720,6 +1992,8 @@
        id="use7241"
        transform="translate(-0.35714341,-359.19643)"
        width="744.09448"
-       height="1052.3622" />
+       height="1052.3622"
+       inkscape:export-xdpi="182"
+       inkscape:export-ydpi="182" />
   </g>
 </svg>
