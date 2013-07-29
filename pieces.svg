@@ -109,10 +109,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284272"
-     inkscape:cx="242.43238"
-     inkscape:cy="936.55937"
+     inkscape:cx="291.62086"
+     inkscape:cy="717.0745"
      inkscape:document-units="px"
-     inkscape:current-layer="g6097"
+     inkscape:current-layer="g6307"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:object-paths="false"
@@ -142,7 +142,8 @@
   <g
      inkscape:label="Background"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     sodipodi:insensitive="true">
     <rect
        style="fill-opacity:1;stroke:#808080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect4163"
@@ -572,442 +573,518 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Letters">
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="129.14063"
-       y="351.3075"
-       id="text4511-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4513-7"
-         x="129.14063"
-         y="351.3075">K</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="180.02344"
-       y="352.04968"
-       id="text4547-4"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4549-0"
-         x="180.02344"
-         y="352.04968">Q</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="228.92188"
-       y="352.06531"
-       id="text4551-9"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4553-4"
-         x="228.92188"
-         y="352.06531">G</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="330.32813"
-       y="352.11218"
-       id="text4555-8"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4557-8"
-         x="330.32813"
-         y="352.11218">H</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="280.77344"
-       y="352.04968"
-       id="text4559-2"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4561-4"
-         x="280.77344"
-         y="352.04968">S</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="378.77344"
-       y="350.84656"
-       id="text4563-5"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4565-5"
-         x="378.77344"
-         y="350.84656">A</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-       x="430.63281"
-       y="352.08093"
-       id="text4567-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4569-7"
-         x="430.63281"
-         y="352.08093">F</tspan></text>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4511-1"
-       id="use4652"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4547-4"
-       id="use4654"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4551-9"
-       id="use4656"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4555-8"
-       id="use4658"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4559-2"
-       id="use4660"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4563-5"
-       id="use4662"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4567-1"
-       id="use4664"
-       transform="translate(0,50)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4511-1"
-       id="use4666"
-       transform="translate(0,100.00001)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4547-4"
-       id="use4668"
-       transform="translate(0,99.999998)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4551-9"
-       id="use4670"
-       transform="translate(0,100)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4555-8"
-       id="use4672"
-       transform="translate(0,99.999998)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4559-2"
-       id="use4674"
-       transform="translate(0,99.999998)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4563-5"
-       id="use4676"
-       transform="translate(0,100)"
-       width="744.09448"
-       height="1052.3622" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#text4567-1"
-       id="use4678"
-       transform="translate(0,99.999998)"
-       width="744.09448"
-       height="1052.3622" />
     <g
-       id="g6097">
-      <g
-         id="g6198">
-        <path
-           id="path5793"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352422999999999"
-           d="m 411,87.362174 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000006 16,16.000006 8.83656,0 16,-7.163449 16,-16.000006 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000006 20,20.000006 11.04569,0 20,-8.954309 20,-20.000006 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+       id="g6198">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 411,87.362174 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000006 16,16.000006 8.83656,0 16,-7.163449 16,-16.000006 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000006 20,20.000006 11.04569,0 20,-8.954309 20,-20.000006 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-2"
+         y="94.69812"
+         x="395.00781"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
+           y="94.69812"
            x="395.00781"
+           id="tspan4569-6"
+           sodipodi:role="line">N</tspan></text>
+      <text
+         transform="translate(-50,1.8543751e-6)"
+         sodipodi:linespacing="125%"
+         id="text5736-0"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-4"
+           xlink:href="#path4220-5-1"><tspan
+   style="fill:#000000;fill-opacity:1"
+   id="tspan5738-9">nightingalE</tspan></textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,789.9999,174.72438)"
+         id="use5776-4"
+         xlink:href="#text5736-0"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 461,87.362172 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,15.999998 16,15.999998 8.83656,0 16,-7.163438 16,-15.999998 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,19.999998 20,19.999998 11.04569,0 20,-8.954298 20,-19.999998 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793-3" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-6"
+         y="94.69812"
+         x="445.00781"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
            y="94.69812"
-           id="text4567-2"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-6"
-             x="395.00781"
-             y="94.69812">N</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352422999999999"
-           id="text5736-0"
-           sodipodi:linespacing="125%"
-           transform="translate(-50,1.8543751e-6)"><textPath
-             xlink:href="#path4220-5-1"
-             id="textPath5771-4"><tspan
-   id="tspan5738-9"
-   style="fill:#000000;fill-opacity:1">nightingalE</tspan></textPath></text>
-        <use
-           x="0"
-           y="0"
-           xlink:href="#text5736-0"
-           id="use5776-4"
-           transform="matrix(-1,0,0,-1,789.9999,174.72438)"
-           width="744.09448"
-           height="1052.3622" />
-        <path
-           id="path5793-3"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352422999999999"
-           d="m 461,87.362172 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,15.999998 16,15.999998 8.83656,0 16,-7.163438 16,-15.999998 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,19.999998 20,19.999998 11.04569,0 20,-8.954298 20,-19.999998 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
            x="445.00781"
-           y="94.69812"
-           id="text4567-6"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-2"
-             x="445.00781"
-             y="94.69812">L</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352422999999999"
-           id="text5736-4"
-           sodipodi:linespacing="125%"
-           transform="translate(-1.3427734e-5,1.0192559e-5)"><textPath
-             xlink:href="#path4220-5-6"
-             id="textPath5771-5">Lotus</textPath></text>
-        <use
-           x="0"
-           y="0"
-           xlink:href="#text5736-4"
-           id="use5776-8"
-           transform="matrix(-1,0,0,-1,889.99989,174.72437)"
-           width="744.09448"
-           height="1052.3622" />
-        <path
-           id="path5793-3-4"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352423"
-           d="m 358.95509,87.121708 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,16.000012 16,16.000012 8.83656,0 16,-7.163452 16,-16.000012 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,20.000012 20,20.000012 11.04569,0 20,-8.954312 20,-20.000012 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+           id="tspan4569-2"
+           sodipodi:role="line">L</tspan></text>
+      <text
+         transform="translate(-1.3427734e-5,1.0192559e-5)"
+         sodipodi:linespacing="125%"
+         id="text5736-4"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-5"
+           xlink:href="#path4220-5-6">Lotus</textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,889.99989,174.72437)"
+         id="use5776-8"
+         xlink:href="#text5736-4"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 358.95509,87.121708 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,16.000012 16,16.000012 8.83656,0 16,-7.163452 16,-16.000012 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,20.000012 20,20.000012 11.04569,0 20,-8.954312 20,-20.000012 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793-3-4" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-6-9"
+         y="94.457657"
+         x="342.96292"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
+           y="94.457657"
            x="342.96292"
-           y="94.457657"
-           id="text4567-6-9"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-2-8"
-             x="342.96292"
-             y="94.457657">M</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352423"
-           id="text5736-4-2"
-           sodipodi:linespacing="125%"
-           transform="translate(-102.04491,-0.24045431)"><textPath
-             xlink:href="#path4220-5-6-1"
-             id="textPath5771-5-4">monkey</textPath></text>
-        <use
-           x="0"
-           y="0"
-           xlink:href="#text5736-4-2"
-           id="use5776-8-5"
-           transform="matrix(-1,0,0,-1,685.91008,174.24346)"
-           width="744.09448"
-           height="1052.3622" />
-        <path
-           id="path5793-3-6"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352423"
-           d="m 310.99998,87.362171 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000009 16,16.000009 8.83656,0 16,-7.163452 16,-16.000009 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000009 20,20.000009 11.04569,0 20,-8.954312 20,-20.000009 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+           id="tspan4569-2-8"
+           sodipodi:role="line">M</tspan></text>
+      <text
+         transform="translate(-102.04491,-0.24045431)"
+         sodipodi:linespacing="125%"
+         id="text5736-4-2"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-5-4"
+           xlink:href="#path4220-5-6-1">monkey</textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,685.91008,174.24346)"
+         id="use5776-8-5"
+         xlink:href="#text5736-4-2"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 310.99998,87.362171 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000009 16,16.000009 8.83656,0 16,-7.163452 16,-16.000009 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000009 20,20.000009 11.04569,0 20,-8.954312 20,-20.000009 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793-3-6" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-6-2"
+         y="94.69812"
+         x="295.00781"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
+           y="94.69812"
            x="295.00781"
+           id="tspan4569-2-3"
+           sodipodi:role="line">t</tspan></text>
+      <text
+         transform="translate(-150.00002,8.9496841e-6)"
+         sodipodi:linespacing="125%"
+         id="text5736-4-8"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-5-2"
+           xlink:href="#path4220-5-6-8">tiger</textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,589.99986,174.72438)"
+         id="use5776-8-6"
+         xlink:href="#text5736-4-8"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 260.99998,87.362174 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000006 16,16.000006 8.83656,0 16,-7.163449 16,-16.000006 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000006 20,20.000006 11.04569,0 20,-8.954309 20,-20.000006 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793-3-5" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-6-7"
+         y="94.69812"
+         x="245.00781"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
            y="94.69812"
-           id="text4567-6-2"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-2-3"
-             x="295.00781"
-             y="94.69812">t</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352423"
-           id="text5736-4-8"
-           sodipodi:linespacing="125%"
-           transform="translate(-150.00002,8.9496841e-6)"><textPath
-             xlink:href="#path4220-5-6-8"
-             id="textPath5771-5-2">tiger</textPath></text>
-        <use
-           x="0"
-           y="0"
-           xlink:href="#text5736-4-8"
-           id="use5776-8-6"
-           transform="matrix(-1,0,0,-1,589.99986,174.72438)"
-           width="744.09448"
-           height="1052.3622" />
-        <path
-           id="path5793-3-5"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352423"
-           d="m 260.99998,87.362174 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000006 16,16.000006 8.83656,0 16,-7.163449 16,-16.000006 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000006 20,20.000006 11.04569,0 20,-8.954309 20,-20.000006 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
            x="245.00781"
-           y="94.69812"
-           id="text4567-6-7"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-2-82"
-             x="245.00781"
-             y="94.69812">p</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352423"
-           id="text5736-4-7"
-           sodipodi:linespacing="125%"
-           transform="translate(-200.00002,1.1908594e-5)"><textPath
-             xlink:href="#path4220-5-6-2"
-             id="textPath5771-5-8">panda</textPath></text>
-        <use
-           x="0"
-           y="0"
-           xlink:href="#text5736-4-7"
-           id="use5776-8-0"
-           transform="matrix(-1,0,0,-1,489.99986,174.72438)"
-           width="744.09448"
-           height="1052.3622" />
-        <path
-           id="path5793-3-8"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352423"
-           d="m 208.95509,87.121708 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836558 7.16344,16.000012 16,16.000012 8.83656,0 16,-7.163454 16,-16.000012 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045698 8.95431,20.000012 20,20.000012 11.04569,0 20,-8.954314 20,-20.000012 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-           x="192.96292"
+           id="tspan4569-2-82"
+           sodipodi:role="line">p</tspan></text>
+      <text
+         transform="translate(-200.00002,1.1908594e-5)"
+         sodipodi:linespacing="125%"
+         id="text5736-4-7"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-5-8"
+           xlink:href="#path4220-5-6-2">panda</textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,489.99986,174.72438)"
+         id="use5776-8-0"
+         xlink:href="#text5736-4-7"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 208.95509,87.121708 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836558 7.16344,16.000012 16,16.000012 8.83656,0 16,-7.163454 16,-16.000012 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045698 8.95431,20.000012 20,20.000012 11.04569,0 20,-8.954314 20,-20.000012 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793-3-8" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-6-78"
+         y="94.457657"
+         x="192.96292"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
            y="94.457657"
-           id="text4567-6-78"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-2-1"
-             x="192.96292"
-             y="94.457657">e</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352423"
-           id="text5736-4-6"
-           sodipodi:linespacing="125%"
-           transform="translate(-252.04491,-0.24045431)"><textPath
-             xlink:href="#path4220-5-6-7"
-             id="textPath5771-5-0">elephant</textPath></text>
-        <use
-           x="0"
-           y="0"
-           xlink:href="#text5736-4-6"
-           id="use5776-8-9"
-           transform="matrix(-1,0,0,-1,385.91008,174.24346)"
-           width="744.09448"
-           height="1052.3622" />
-        <path
-           id="path5793-3-9"
-           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.60352423"
-           d="m 160.99998,87.362171 c 0,-8.836547 -7.16344,-15.999987 -16,-15.999987 -8.83656,0 -16,7.16344 -16,15.999987 0,8.83656 7.16344,16.000009 16,16.000009 8.83656,0 16,-7.163449 16,-16.000009 z m 4,0 c 0,-11.045697 -8.95431,-19.999987 -20,-19.999987 -11.04569,0 -20,8.95429 -20,19.999987 0,11.0457 8.95431,20.000009 20,20.000009 11.04569,0 20,-8.954309 20,-20.000009 z"
-           inkscape:connector-curvature="0" />
-        <text
-           xml:space="preserve"
-           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
-           x="145.00781"
+           x="192.96292"
+           id="tspan4569-2-1"
+           sodipodi:role="line">e</tspan></text>
+      <text
+         transform="translate(-252.04491,-0.24045431)"
+         sodipodi:linespacing="125%"
+         id="text5736-4-6"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-5-0"
+           xlink:href="#path4220-5-6-7">elephant</textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,385.91008,174.24346)"
+         id="use5776-8-9"
+         xlink:href="#text5736-4-6"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 160.99998,87.362171 c 0,-8.836547 -7.16344,-15.999987 -16,-15.999987 -8.83656,0 -16,7.16344 -16,15.999987 0,8.83656 7.16344,16.000009 16,16.000009 8.83656,0 16,-7.163449 16,-16.000009 z m 4,0 c 0,-11.045697 -8.95431,-19.999987 -20,-19.999987 -11.04569,0 -20,8.95429 -20,19.999987 0,11.0457 8.95431,20.000009 20,20.000009 11.04569,0 20,-8.954309 20,-20.000009 z"
+         style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+         id="path5793-3-9" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4567-6-0"
+         y="94.69812"
+         x="145.00781"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><tspan
            y="94.69812"
-           id="text4567-6-0"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             id="tspan4569-2-0"
-             x="145.00781"
-             y="94.69812">D</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja;opacity:0.60352423"
-           id="text5736-4-0"
-           sodipodi:linespacing="125%"
-           transform="translate(-300.00002,1.2308594e-5)"><textPath
-             xlink:href="#path4220-5-6-5"
-             id="textPath5771-5-7">dragon</textPath></text>
+           x="145.00781"
+           id="tspan4569-2-0"
+           sodipodi:role="line">D</tspan></text>
+      <text
+         transform="translate(-300.00002,1.2308594e-5)"
+         sodipodi:linespacing="125%"
+         id="text5736-4-0"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         xml:space="preserve"><textPath
+           id="textPath5771-5-7"
+           xlink:href="#path4220-5-6-5">dragon</textPath></text>
+      <use
+         height="1052.3622"
+         width="744.09448"
+         transform="matrix(-1,0,0,-1,289.99986,174.72438)"
+         id="use5776-8-2"
+         xlink:href="#text5736-4-0"
+         y="0"
+         x="0" />
+    </g>
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="translate(2e-5,50.000003)"
+       id="use6303"
+       xlink:href="#g6198"
+       y="0"
+       x="0" />
+    <use
+       height="1052.3622"
+       width="744.09448"
+       transform="translate(2e-5,100)"
+       id="use6305"
+       xlink:href="#g6198"
+       y="0"
+       x="0" />
+    <g
+       transform="translate(2e-5,250)"
+       id="g6307">
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="395.00781"
+         y="94.69812"
+         id="text6311"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6313"
+           x="395.00781"
+           y="94.69812">A</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6315"
+         sodipodi:linespacing="125%"
+         transform="translate(-50,1.8543751e-6)"><textPath
+           xlink:href="#path4220-5-1"
+           id="textPath6317">aclhemist<tspan
+   id="tspan6319"
+   style="fill:#000000;fill-opacity:1" /></textPath></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="445.00781"
+         y="94.69812"
+         id="text6325"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6327"
+           x="445.00781"
+           y="94.69812">F</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6329"
+         sodipodi:linespacing="125%"
+         transform="translate(-1.3427734e-5,1.0192559e-5)"><textPath
+           xlink:href="#path4220-5-6"
+           id="textPath6331">farmer</textPath></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="342.96292"
+         y="94.457657"
+         id="text6337"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6339"
+           x="342.96292"
+           y="94.457657">H</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6341"
+         sodipodi:linespacing="125%"
+         transform="translate(-102.04491,-0.24045431)"><textPath
+           xlink:href="#path4220-5-6-1"
+           id="textPath6343">hunter</textPath></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="295.00781"
+         y="94.69812"
+         id="text6349"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6351"
+           x="295.00781"
+           y="94.69812">S</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6353"
+         sodipodi:linespacing="125%"
+         transform="translate(-150.00002,8.9496841e-6)"><textPath
+           xlink:href="#path4220-5-6-8"
+           id="textPath6355">strategist</textPath></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="245.00781"
+         y="94.69812"
+         id="text6361"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6363"
+           x="245.00781"
+           y="94.69812">G</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6365"
+         sodipodi:linespacing="125%"
+         transform="translate(-200.00002,1.1908594e-5)"><textPath
+           xlink:href="#path4220-5-6-2"
+           id="textPath6367">general</textPath></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="192.96292"
+         y="94.457657"
+         id="text6373"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6375"
+           x="192.96292"
+           y="94.457657">Q</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6377"
+         sodipodi:linespacing="125%"
+         transform="translate(-252.04491,-0.24045431)"><textPath
+           xlink:href="#path4220-5-6-7"
+           id="textPath6379">empress</textPath></text>
+      <text
+         xml:space="preserve"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         x="145.00781"
+         y="94.69812"
+         id="text6385"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan6387"
+           x="145.00781"
+           y="94.69812">K</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;opacity:0.60352418;fill:#000000;fill-opacity:1;stroke:none;font-family:Last Ninja;-inkscape-font-specification:Last Ninja"
+         id="text6389"
+         sodipodi:linespacing="125%"
+         transform="translate(-300.00002,1.2308594e-5)"><textPath
+           xlink:href="#path4220-5-6-5"
+           id="textPath6391">emperor</textPath></text>
+      <g
+         id="g6491"
+         transform="matrix(-1,0,0,-1,385.91018,174.24344)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 208.95509,87.121709 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,16.000011 16,16.000011 8.83656,0 16,-7.163451 16,-16.000011 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,20.000011 20,20.000011 11.04569,0 20,-8.954311 20,-20.000011 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6371" />
         <use
-           x="0"
+           height="1052.3622"
+           width="744.09448"
+           transform="translate(4.4734493e-6,4.4875623e-5)"
+           id="use6489"
+           xlink:href="#text6377"
            y="0"
-           xlink:href="#text5736-4-0"
-           id="use5776-8-2"
-           transform="matrix(-1,0,0,-1,289.99986,174.72438)"
+           x="0" />
+      </g>
+      <g
+         id="g6497"
+         transform="matrix(-1,0,0,-1,289.99996,174.72436)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 160.99998,87.362171 c 0,-8.836547 -7.16344,-15.999987 -16,-15.999987 -8.83656,0 -16,7.16344 -16,15.999987 0,8.83656 7.16344,16.000009 16,16.000009 8.83656,0 16,-7.163449 16,-16.000009 z m 4,0 c 0,-11.045697 -8.95431,-19.999987 -20,-19.999987 -11.04569,0 -20,8.95429 -20,19.999987 0,11.0457 8.95431,20.000009 20,20.000009 11.04569,0 20,-8.954309 20,-20.000009 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6383" />
+        <use
+           id="use6495"
+           xlink:href="#text6389"
+           y="0"
+           x="0"
            width="744.09448"
            height="1052.3622" />
       </g>
-      <use
-         x="0"
-         y="0"
-         xlink:href="#g6198"
-         id="use6303"
-         transform="translate(2e-5,50.000003)"
-         width="744.09448"
-         height="1052.3622" />
-      <use
-         x="0"
-         y="0"
-         xlink:href="#g6198"
-         id="use6305"
-         transform="translate(2e-5,100)"
-         width="744.09448"
-         height="1052.3622" />
+      <g
+         id="g6503"
+         transform="matrix(-1,0,0,-1,489.99996,174.72436)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 260.99998,87.362174 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000006 16,16.000006 8.83656,0 16,-7.163449 16,-16.000006 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000006 20,20.000006 11.04569,0 20,-8.954309 20,-20.000006 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6359" />
+        <use
+           id="use6501"
+           xlink:href="#text6365"
+           y="0"
+           x="0"
+           width="744.09448"
+           height="1052.3622" />
+      </g>
+      <g
+         id="g6509"
+         transform="matrix(-1,0,0,-1,589.99996,174.72436)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 310.99998,87.362171 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000009 16,16.000009 8.83656,0 16,-7.163452 16,-16.000009 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000009 20,20.000009 11.04569,0 20,-8.954312 20,-20.000009 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6347" />
+        <use
+           id="use6507"
+           xlink:href="#text6353"
+           y="0"
+           x="0"
+           width="744.09448"
+           height="1052.3622" />
+      </g>
+      <g
+         id="g6515"
+         transform="matrix(-1,0,0,-1,685.91018,174.24344)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 358.95509,87.121708 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,16.000012 16,16.000012 8.83656,0 16,-7.163452 16,-16.000012 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,20.000012 20,20.000012 11.04569,0 20,-8.954312 20,-20.000012 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6335" />
+        <use
+           id="use6513"
+           xlink:href="#text6341"
+           y="0"
+           x="0"
+           width="744.09448"
+           height="1052.3622" />
+      </g>
+      <g
+         id="g6521"
+         transform="matrix(-1,0,0,-1,790,174.72436)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 411,87.362174 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.836557 7.16344,16.000006 16,16.000006 8.83656,0 16,-7.163449 16,-16.000006 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.045697 8.95431,20.000006 20,20.000006 11.04569,0 20,-8.954309 20,-20.000006 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6309" />
+        <use
+           id="use6519"
+           xlink:href="#text6315"
+           y="0"
+           x="0"
+           width="744.09448"
+           height="1052.3622" />
+      </g>
+      <g
+         id="g6527"
+         transform="matrix(-1,0,0,-1,890,174.72436)">
+        <path
+           inkscape:connector-curvature="0"
+           d="m 461,87.362172 c 0,-8.83655 -7.16344,-15.99999 -16,-15.99999 -8.83656,0 -16,7.16344 -16,15.99999 0,8.83656 7.16344,15.999998 16,15.999998 8.83656,0 16,-7.163438 16,-15.999998 z m 4,0 c 0,-11.0457 -8.95431,-19.99999 -20,-19.99999 -11.04569,0 -20,8.95429 -20,19.99999 0,11.0457 8.95431,19.999998 20,19.999998 11.04569,0 20,-8.954298 20,-19.999998 z"
+           style="opacity:0.60352418;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="path6323" />
+        <use
+           id="use6525"
+           xlink:href="#text6329"
+           y="0"
+           x="0"
+           width="744.09448"
+           height="1052.3622" />
+      </g>
     </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g6307"
+       id="use6485"
+       transform="translate(0,50.240465)"
+       width="744.09448"
+       height="1052.3622" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#g6307"
+       id="use6487"
+       transform="translate(0,100.24046)"
+       width="744.09448"
+       height="1052.3622" />
   </g>
 </svg>
