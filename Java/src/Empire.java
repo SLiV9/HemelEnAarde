@@ -1,0 +1,1 @@
+enum Empire { SOUTH, NORTH };
