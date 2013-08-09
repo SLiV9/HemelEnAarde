@@ -4,6 +4,7 @@ public class Piece
 	private Character C;
 	private Empire E;
 	
+	Board platform;
 	Space position;
 	
 	// TODO: isrevealed

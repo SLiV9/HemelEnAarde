@@ -25,10 +25,15 @@ public class Body
 
 	boolean canReach(Space S)
 	{
+		return canReach(S, speed);
+	}
+
+	protected boolean canReach(Space S, int spd)
+	{
 		if (!Space.isValid(S))
 			return false;
 
-		if (Space.distance(owner.position, S) > speed)
+		if (Space.distance(owner.position, S) > spd)
 			return false;
 		if (!Space.isStraight(owner.position, S))
 			return false;
@@ -41,7 +46,38 @@ public class Body
 
 	boolean isBlocked(Space S)
 	{
-		// TODO: line of sight blocking
+		if (S.equals(owner.position))
+			return false;
+		if (Space.distance(owner.position, S) <= 1)
+			return false;
+
+		int dr, dc, sr, sc, adc, opr, opc;
+		opr = owner.position.row;
+		opc = owner.position.col;
+		dr = S.row - opr;
+		dc = S.col - opc;
+		sr = Integer.signum(dr);
+		sc = Integer.signum(dc);
+		adc = Math.abs(dc);
+
+		for (int i = 1; i < adc; i++)
+		{
+			if (isBlocked(opr + sr * i, opc + sc * i))
+				return true;
+		}
+
+		return false;
+	}
+
+	protected boolean isBlocked(int r, int c)
+	{
+		Space A;
+		A = owner.platform.getHex(r, c);
+		if (A.isOccupied())
+		{
+			if (A.getOccupant().isOpposing(owner))
+				return true;
+		}
 
 		return false;
 	}
@@ -49,6 +85,8 @@ public class Body
 	boolean canMove(Space S)
 	{
 		if (!Space.isValid(S))
+			return false;
+		if (S.equals(owner.position))
 			return false;
 
 		if (!canReach(S))
@@ -73,10 +111,20 @@ public class Body
 
 	boolean canCapture(Space S)
 	{
+		return canCapture(S, speed);
+	}
+
+	protected boolean canCapture(Space S, int spd)
+	{
 		if (!Space.isValid(S))
 			return false;
+		if (S.equals(owner.position))
+			return false;
 
-		if (!canReach(S))
+		if (!canReach(S, spd))
+			return false;
+
+		if (isIgnoble(S))
 			return false;
 
 		if (!S.isOccupied())
@@ -123,6 +171,8 @@ class Dragon extends Body
 
 class Elephant extends Body
 {
+	static final int ATTACKRANGE = 4;
+
 	Elephant()
 	{
 		type = BodyType.E;
@@ -136,8 +186,7 @@ class Elephant extends Body
 	/* The Elephant has longer range when attacking. */
 	boolean canCapture(Space S)
 	{
-		// TODO: change this to have longer range
-		return super.canCapture(S);
+		return canCapture(S, ATTACKRANGE);
 	}
 }
 
@@ -198,7 +247,33 @@ class Monkey extends Body
 
 	boolean isBlocked(Space S)
 	{
-		// TODO: line of sight blocking for monkey
+		if (S.equals(owner.position))
+			return false;
+		if (Space.distance(owner.position, S) <= 1)
+			return false;
+
+		if (Space.isStraight(owner.position, S))
+			return super.isBlocked(S);
+
+		// Thus the Monkey is moving in an arc.
+		int dr, dc, sr, sc, opr, opc;
+		opr = owner.position.row;
+		opc = owner.position.col;
+		dr = S.row - opr;
+		dc = S.col - opc;
+		sr = Integer.signum(dr);
+		sc = Integer.signum(dc);
+
+		if (dc == 0)
+		{
+			if (isBlocked(opr + sr, opc - 1) && isBlocked(opr + sr, opc + 1))
+				return true;
+		}
+		else
+		{
+			if (isBlocked(opr + sr, opc + sc) && isBlocked(opr, opc + 2 * sc))
+				return true;
+		}
 
 		return false;
 	}
