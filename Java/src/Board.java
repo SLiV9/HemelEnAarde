@@ -74,11 +74,11 @@ class Board
 	{
 		if (c >= 0)
 		{
-			return "" + ('f' + r) + ('0' + c);
+			return "" + ((char) ('f' + r)) + ((char) ('0' + c));
 		}
 		else
 		{
-			return "" + ('0' - c) + ('f' + r);
+			return "" + ((char) ('0' - c)) + ((char) ('f' + r));
 		}
 	}
 	

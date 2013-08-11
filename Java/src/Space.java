@@ -46,6 +46,11 @@ public class Space
 	}
 
 	/* Common queries. */
+	String name()
+	{
+		return Board.spacename(row, col);
+	}
+	
 	boolean isGarden()
 	{
 		return (type == SpaceType.GARDEN);
