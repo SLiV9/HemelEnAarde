@@ -17,13 +17,13 @@ class LineParser
 	{
 		String resultm, resultc;
 
-		resultm = MP.parse(B, command);
+		resultm = CP.parse(B, command);
 		if (!resultm.contains("what"))
 		{
 			return resultm;
 		}
 
-		resultc = CP.parse(B, command);
+		resultc = MP.parse(B, command);
 		if (!resultc.contains("what"))
 		{
 			return resultc;
