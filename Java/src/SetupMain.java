@@ -8,9 +8,8 @@ public class SetupMain
 
 		Board B = new Board();
 		LineParser LP = new LineParser(new CommandParser(), new MoveParser());
+		LP.setPlatform(B);
 		Scanner sc = new Scanner(System.in);
-
-		B.print();
 
 		// TODO: player initiation
 
@@ -31,6 +30,11 @@ public class SetupMain
 
 			result = LP.parse(command);
 			System.out.println("\t>> " + result);
+			
+			if (result.contains("ok"))
+			{
+				B.print();
+			}
 		}
 
 		System.out.println("\n[ done ]");

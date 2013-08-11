@@ -1,14 +1,29 @@
 public class Character
 {
-	/* Character specific semi-constants */
-	CharacterType type = CharacterType.F;
-	String Name = "Unknown";
-	char Initial = '?';
+	/* Character specific constants */
+	protected static final CharacterType type = CharacterType.F;
+	protected static final String Name = "Unknown";
+	protected static final char Initial = '?';
 
 	/* Gadgets */
 	protected Piece owner = null;
 
 	/* Queries */
+	CharacterType getType()
+	{
+		return type;
+	}
+
+	String getName()
+	{
+		return Name;
+	}
+
+	char getInitial()
+	{
+		return Initial;
+	}
+
 	boolean canMove(Space S)
 	{
 		return false;
@@ -26,10 +41,7 @@ public class Character
 
 class Farmer extends Character
 {
-	Farmer()
-	{
-		type = CharacterType.F;
-		Name = "Farmer";
-		Initial = 'L';
-	}
+	protected static final CharacterType type = CharacterType.F;
+	protected static final String Name = "Farmer";
+	protected static final char Initial = 'F';
 }

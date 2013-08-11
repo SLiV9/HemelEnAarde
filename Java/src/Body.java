@@ -1,26 +1,36 @@
 public class Body
 {
-	/* Body specific semi-constants */
-	BodyType type = BodyType.L;
-	String Name = "Unknown";
-	char Initial = '?';
+	/* Body specific constants */
+	protected static final BodyType type = BodyType.L;
+	protected static final String Name = "Unknown";
+	protected static final char Initial = '?';
 
-	protected int rank = 1;
-	protected int speed = 3;
-	protected boolean noble = false;
+	protected static final int rank = 1;
+	protected static final int speed = 3;
+	protected static final boolean noble = false;
 
 	/* Gadgets */
 	protected Piece owner = null;
 
 	/* Queries */
+	BodyType getType()
+	{
+		return type;
+	}
+	
+	String getName()
+	{
+		return Name;
+	}
+	
+	char getInitial()
+	{
+		return Initial;
+	}
+	
 	int getRank()
 	{
-		return 0;
-	}
-
-	boolean isNoble()
-	{
-		return false;
+		return rank;
 	}
 
 	boolean canReach(Space S)
@@ -149,15 +159,12 @@ public class Body
 
 class Dragon extends Body
 {
-	Dragon()
-	{
-		type = BodyType.D;
-		Name = "Dragon";
-		Initial = 'D';
+	protected static final BodyType type = BodyType.D;
+	protected static final String Name = "Dragon";
+	protected static final char Initial = 'D';
 
-		rank = 5;
-		speed = 3;
-	}
+	protected static final int rank = 5;
+	protected static final int speed = 3;
 
 	/* Dragon cannot capture Nightingale. */
 	boolean outranks(Piece T)
@@ -171,18 +178,15 @@ class Dragon extends Body
 
 class Elephant extends Body
 {
-	static final int ATTACKRANGE = 4;
+	protected static final BodyType type = BodyType.E;
+	protected static final String Name = "Elephant";
+	protected static final char Initial = 'E';
 
-	Elephant()
-	{
-		type = BodyType.E;
-		Name = "Elephant";
-		Initial = 'E';
-
-		rank = 4;
-		speed = 2;
-	}
-
+	protected static final int rank = 4;
+	protected static final int speed = 2;
+	
+	protected static final int ATTACKRANGE = 4;
+	
 	/* The Elephant has longer range when attacking. */
 	boolean canCapture(Space S)
 	{
@@ -192,42 +196,33 @@ class Elephant extends Body
 
 class Panda extends Body
 {
-	Panda()
-	{
-		type = BodyType.P;
-		Name = "Panda";
-		Initial = 'P';
+	protected static final BodyType type = BodyType.P;
+	protected static final String Name = "Panda";
+	protected static final char Initial = 'P';
 
-		rank = 4;
-		speed = 1;
-		noble = true;
-	}
+	protected static final int rank = 4;
+	protected static final int speed = 1;
+	protected static final boolean noble = true;
 }
 
 class Tiger extends Body
 {
-	Tiger()
-	{
-		type = BodyType.T;
-		Name = "Tiger";
-		Initial = 'T';
+	static final BodyType type = BodyType.T;
+	static final String Name = "Tiger";
+	static final char Initial = 'T';
 
-		rank = 3;
-		speed = 4;
-	}
+	protected static final int rank = 3;
+	protected static final int speed = 4;
 }
 
 class Monkey extends Body
 {
-	Monkey()
-	{
-		type = BodyType.M;
-		Name = "Monkey";
-		Initial = 'M';
+	protected static final BodyType type = BodyType.M;
+	protected static final String Name = "Monkey";
+	protected static final char Initial = 'M';
 
-		rank = 3;
-		speed = 2;
-	}
+	protected static final int rank = 3;
+	protected static final int speed = 2;
 
 	/* The Monkey can move in arcs. */
 	boolean canReach(Space S)
@@ -281,16 +276,13 @@ class Monkey extends Body
 
 class Nightingale extends Body
 {
-	Nightingale()
-	{
-		type = BodyType.N;
-		Name = "Nightingale";
-		Initial = 'N';
+	protected static final BodyType type = BodyType.N;
+	protected static final String Name = "Nightingale";
+	protected static final char Initial = 'N';
 
-		rank = 2;
-		speed = 4;
-		noble = true;
-	}
+	protected static final int rank = 2;
+	protected static final int speed = 4;
+	protected static final boolean noble = true;
 
 	/* The Nightingale can fly. */
 	boolean isBlocked(Space S)
@@ -310,14 +302,11 @@ class Nightingale extends Body
 
 class Lotus extends Body
 {
-	Lotus()
-	{
-		type = BodyType.L;
-		Name = "Lotus";
-		Initial = 'L';
+	protected static final BodyType type = BodyType.L;
+	protected static final String Name = "Lotus";
+	protected static final char Initial = 'L';
 
-		rank = 1;
-		speed = 3;
-		noble = true;
-	}
+	protected static final int rank = 1;
+	protected static final int speed = 3;
+	protected static final boolean noble = true;
 }

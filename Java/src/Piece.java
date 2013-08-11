@@ -42,16 +42,16 @@ public class Piece
 	
 	BodyType getBodyType()
 	{
-		return B.type;
+		return B.getType();
 	}
 	
 	CharacterType getCharacterType()
 	{
-		return C.type;
+		return C.getType();
 	}
 	
 	String Initials()
 	{
-		return "" + B.Initial + C.Initial;
+		return "" + B.getInitial() + C.getInitial();
 	}
 }
