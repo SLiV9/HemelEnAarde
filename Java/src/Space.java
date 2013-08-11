@@ -97,6 +97,7 @@ public class Space
 		{
 			occupant.platform = null;
 			occupant.position = null;
+			platform.removePiece(occupant);
 		}
 		occupant = null;
 

@@ -118,15 +118,27 @@ public class Body
 	protected boolean canReach(Space S, int spd)
 	{
 		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
 			return false;
+		}
 
 		if (Space.distance(owner.position, S) > spd)
+		{
+			System.out.println("\t[too far]");
 			return false;
+		}
 		if (!Space.isStraight(owner.position, S))
+		{
+			System.out.println("\t[not straight]");
 			return false;
+		}
 
 		if (isBlocked(S))
+		{
+			System.out.println("\t[blocked]");
 			return false;
+		}
 
 		return true;
 	}
@@ -150,7 +162,7 @@ public class Body
 			dbl = 2;
 		adc = Math.abs(dc);
 
-		for (int i = 1; i < adc; i += dbl)
+		for (int i = dbl; i < adc; i += dbl)
 		{
 			if (isBlocked(opr + sr * i, opc + dbl * sc * i))
 				return true;
@@ -181,18 +193,33 @@ public class Body
 	boolean canMove(Space S)
 	{
 		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
 			return false;
+		}
 		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
 			return false;
+		}
 
 		if (!canReach(S))
+		{
+			System.out.println("\t[cannot reach]");
 			return false;
+		}
 
 		if (isIgnoble(S))
+		{
+			System.out.println("\t[ignoble]");
 			return false;
+		}
 
 		if (S.isOccupied())
+		{
+			System.out.println("\t[occupied]");
 			return false;
+		}
 
 		return true;
 	}
@@ -213,33 +240,54 @@ public class Body
 	protected boolean canCapture(Space S, int spd)
 	{
 		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
 			return false;
+		}
 		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
 			return false;
+		}
 
 		if (!canReach(S, spd))
+		{
+			System.out.println("\t[cannot reach]");
 			return false;
+		}
 
 		if (isIgnoble(S))
+		{
+			System.out.println("\t[ignoble]");
 			return false;
+		}
 
 		if (!S.isOccupied())
+		{
+			System.out.println("\t[not occupied]");
 			return false;
+		}
 
 		Piece target = S.getOccupant();
 
 		if (!owner.isOpposing(target))
+		{
+			System.out.println("\t[not opposing]");
 			return false;
+		}
 
-		if (!outranks(target))
+		if (!isCapable(target))
+		{
+			System.out.println("\t[not capable]");
 			return false;
+		}
 
 		return true;
 	}
 
-	boolean outranks(Piece T)
+	boolean isCapable(Piece T)
 	{
-		return (T.getRank() > rank());
+		return (T.getRank() <= rank());
 	}
 }
 
@@ -271,12 +319,12 @@ class Dragon extends Body
 	}
 
 	/* Dragon cannot capture Nightingale. */
-	boolean outranks(Piece T)
+	boolean isCapable(Piece T)
 	{
 		if (T.getBodyType() == BodyType.NIGHTINGALE)
 			return false;
 
-		return super.outranks(T);
+		return super.isCapable(T);
 	}
 }
 
@@ -310,7 +358,7 @@ class Elephant extends Body
 	protected int ATTACKRANGE = 4;
 
 	/* The Elephant has longer range when attacking. */
-	boolean canCapture(Space S)
+	protected boolean canCapture(Space S)
 	{
 		return canCapture(S, ATTACKRANGE);
 	}
@@ -405,17 +453,26 @@ class Monkey extends Body
 	}
 
 	/* The Monkey can move in arcs. */
-	boolean canReach(Space S)
+	protected boolean canReach(Space S, int spd)
 	{
 		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
 			return false;
+		}
 
-		if (Space.distance(owner.position, S) > speed())
+		if (Space.distance(owner.position, S) > spd)
+		{
+			System.out.println("\t[too far]");
 			return false;
+		}
 		// Purposefully removed: isStraight
 
 		if (isBlocked(S))
+		{
+			System.out.println("\t[blocked]");
 			return false;
+		}
 
 		return true;
 	}
@@ -493,12 +550,12 @@ class Nightingale extends Body
 	}
 
 	/* Nightingale can capture Dragon. */
-	boolean outranks(Piece T)
+	boolean isCapable(Piece T)
 	{
 		if (T.getBodyType() == BodyType.DRAGON)
 			return true;
 
-		return super.outranks(T);
+		return super.isCapable(T);
 	}
 }
 

@@ -127,16 +127,30 @@ class MoveParser extends LineParser
 						return "fail, space could not be occupied";
 					}
 					oldpos.removeOccupant();
-					
+
 					return "ok, " + P.name() + " to " + S.name();
 				}
-				
+
 				return "fail, illegal move";
 			}
 			else if (movetype == 'x')
 			{
-				// TODO: capturing
-				return "fail, capturing not implemented";
+				if (P.canCapture(S))
+				{
+					Piece oldpiece = S.getOccupant();
+					S.removeOccupant();
+					if (S.addOccupant(P) == false)
+					{
+						S.addOccupant(oldpiece);
+						return "error, space could not be taken over";
+					}
+					oldpos.removeOccupant();
+
+					return "ok, " + P.name() + " captured " + oldpiece.name()
+							+ "* at " + S.name();
+				}
+
+				return "fail, illegal move";
 			}
 			else
 			{

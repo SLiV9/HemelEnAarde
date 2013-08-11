@@ -13,10 +13,13 @@ public class SetupMain
 		Character.makeTables();
 		Character.fillTables();
 		
+		B.print();
+		
 		Scanner sc = new Scanner(System.in);
 		String command, result;
 		for (int i = 0; i < 1000; i++)
 		{
+			System.out.println();
 			System.out.print(":: ");
 			command = sc.nextLine();
 

@@ -113,6 +113,14 @@ class Board
 
 		return true;
 	}
+	
+	void removePiece(Piece P)
+	{
+		if (P == null)
+			return;
+		
+		removePiece(P.getEmpire(), P.getBodyType());
+	}
 
 	void removePiece(Empire e, BodyType bt)
 	{
@@ -136,7 +144,7 @@ class Board
 	{
 		Space S;
 
-		System.out.println("\n{{");
+		System.out.println("{{");
 		for (int r = 2 * HEIGHT; r >= 0; r--)
 		{
 			System.out.print("[ ");
