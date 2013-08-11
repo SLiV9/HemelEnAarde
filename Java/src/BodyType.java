@@ -1,4 +1,4 @@
 public enum BodyType
 {
-	INVALID, D, E, P, T, M, N, L;
+	INVALID, DRAGON, ELEPHANT, PANDA, TIGER, MONKEY, NIGHTINGALE, LOTUS;
 }

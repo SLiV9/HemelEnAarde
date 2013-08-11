@@ -26,7 +26,7 @@ public class SetupMain
 			}
 
 			result = LP.parse(B, command);
-			System.out.println("\t>> " + result);
+			System.out.println(">> " + result);
 			
 			if (result.contains("ok"))
 			{

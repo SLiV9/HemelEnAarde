@@ -12,7 +12,7 @@ class Empires
 			return Empire.INVALID;
 	}
 	
-	static char Initial(Empire e)
+	static char initial(Empire e)
 	{
 		if (e == Empire.SOUTH)
 			return 's';

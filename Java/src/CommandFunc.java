@@ -24,15 +24,19 @@ class CommandMake implements CommandFunc
 		{
 			return "fail, unknown space or invalid syntax";
 		}
-		
-		Piece P = new Piece(e, bt);
-		
-		if (s.addOccupant(P))
+		if (s.isOccupied())
 		{
 			return "fail, space already occupied";
 		}
 		
-		return "ok, " + P.Name() + " created";
+		Piece P = new Piece(e, bt);
+		
+		if (s.addOccupant(P) == false)
+		{
+			return "fail, space could not be occupied";
+		}
+		
+		return "ok, " + P.name() + " created";
 	}
 }
 

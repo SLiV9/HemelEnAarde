@@ -4,33 +4,25 @@ public class Body
 {
 	/* Static queriables. */
 	private static Hashtable<String, BodyType> dictionaryOfTypes;
-	
+
 	private static int count = 0;
 	private int index = 0;
-
-	/* Body specific constants */
-	protected static final BodyType type = BodyType.INVALID;
-	protected static final String Name = "Unknown";
-	protected static final char Initial = '?';
-
-	protected static final int rank = 1;
-	protected static final int speed = 3;
-	protected static final boolean noble = false;
 
 	/* Instance specific gadgets */
 	protected Piece owner = null;
 
 	Body()
 	{
-		if (dictionaryOfTypes != null && type != BodyType.INVALID)
+		if (dictionaryOfTypes != null && type() != BodyType.INVALID)
 		{
-			if (dictionaryOfTypes.get("" + Initial) == null)
-				dictionaryOfTypes.put("" + Initial, type);
+			if (dictionaryOfTypes.get("" + initial()) == null)
+				dictionaryOfTypes.put("" + initial(), type());
 		}
-		
+
 		index = count;
 		count++;
-		System.out.println("new: " + Initial + Integer.toString(index) + ";");
+		System.out.println("\tnew: b" + initial() + Integer.toString(index)
+				+ ";");
 	}
 
 	/* Make (or clear) the list of body types. */
@@ -38,7 +30,7 @@ public class Body
 	{
 		dictionaryOfTypes = new Hashtable<String, BodyType>();
 	}
-	
+
 	static void fillTables()
 	{
 		/* Only add existing and valid body types. */
@@ -50,24 +42,24 @@ public class Body
 		new Nightingale();
 		new Lotus();
 	}
-	
+
 	static Body create(BodyType bt)
 	{
 		switch (bt)
 		{
-		case D:
+		case DRAGON:
 			return new Dragon();
-		case E:
+		case ELEPHANT:
 			return new Elephant();
-		case P:
+		case PANDA:
 			return new Panda();
-		case T:
+		case TIGER:
 			return new Tiger();
-		case M:
+		case MONKEY:
 			return new Monkey();
-		case N:
+		case NIGHTINGALE:
 			return new Nightingale();
-		case L:
+		case LOTUS:
 			return new Lotus();
 		default:
 			return null;
@@ -86,30 +78,41 @@ public class Body
 			return BodyType.INVALID;
 	}
 
+	/* Body specific constants */
+	BodyType type()
+	{
+		return BodyType.INVALID;
+	}
+
+	String name()
+	{
+		return "Unknown";
+	}
+
+	char initial()
+	{
+		return '?';
+	}
+
+	int rank()
+	{
+		return 0;
+	}
+
+	int speed()
+	{
+		return 3;
+	}
+
+	boolean isNoble()
+	{
+		return false;
+	}
+
 	/* Queries */
-	BodyType getType()
-	{
-		return type;
-	}
-
-	String getName()
-	{
-		return Name;
-	}
-
-	char getInitial()
-	{
-		return Initial;
-	}
-
-	int getRank()
-	{
-		return rank;
-	}
-
 	boolean canReach(Space S)
 	{
-		return canReach(S, speed);
+		return canReach(S, speed());
 	}
 
 	protected boolean canReach(Space S, int spd)
@@ -187,7 +190,7 @@ public class Body
 
 	boolean isIgnoble(Space S)
 	{
-		if (S.isGarden() && !noble)
+		if (S.isGarden() && !isNoble())
 			return true;
 
 		return false;
@@ -195,7 +198,7 @@ public class Body
 
 	boolean canCapture(Space S)
 	{
-		return canCapture(S, speed);
+		return canCapture(S, speed());
 	}
 
 	protected boolean canCapture(Space S, int spd)
@@ -227,23 +230,41 @@ public class Body
 
 	boolean outranks(Piece T)
 	{
-		return (T.getRank() > rank);
+		return (T.getRank() > rank());
 	}
 }
 
 class Dragon extends Body
 {
-	protected static final BodyType type = BodyType.D;
-	protected static final String Name = "Dragon";
-	protected static final char Initial = 'D';
+	BodyType type()
+	{
+		return BodyType.DRAGON;
+	}
 
-	protected static final int rank = 5;
-	protected static final int speed = 3;
+	String name()
+	{
+		return "Dragon";
+	}
+
+	char initial()
+	{
+		return 'D';
+	}
+
+	int rank()
+	{
+		return 4;
+	}
+
+	int speed()
+	{
+		return 3;
+	}
 
 	/* Dragon cannot capture Nightingale. */
 	boolean outranks(Piece T)
 	{
-		if (T.getBodyType() == BodyType.N)
+		if (T.getBodyType() == BodyType.NIGHTINGALE)
 			return false;
 
 		return super.outranks(T);
@@ -252,14 +273,32 @@ class Dragon extends Body
 
 class Elephant extends Body
 {
-	protected static final BodyType type = BodyType.E;
-	protected static final String Name = "Elephant";
-	protected static final char Initial = 'E';
+	BodyType type()
+	{
+		return BodyType.ELEPHANT;
+	}
 
-	protected static final int rank = 4;
-	protected static final int speed = 2;
+	String name()
+	{
+		return "Elephant";
+	}
 
-	protected static final int ATTACKRANGE = 4;
+	char initial()
+	{
+		return 'E';
+	}
+
+	int rank()
+	{
+		return 4;
+	}
+
+	int speed()
+	{
+		return 2;
+	}
+
+	protected int ATTACKRANGE = 4;
 
 	/* The Elephant has longer range when attacking. */
 	boolean canCapture(Space S)
@@ -270,33 +309,91 @@ class Elephant extends Body
 
 class Panda extends Body
 {
-	protected static final BodyType type = BodyType.P;
-	protected static final String Name = "Panda";
-	protected static final char Initial = 'P';
+	BodyType type()
+	{
+		return BodyType.PANDA;
+	}
 
-	protected static final int rank = 4;
-	protected static final int speed = 1;
-	protected static final boolean noble = true;
+	String name()
+	{
+		return "Panda";
+	}
+
+	char initial()
+	{
+		return 'P';
+	}
+
+	int rank()
+	{
+		return 4;
+	}
+
+	int speed()
+	{
+		return 1;
+	}
+
+	boolean isNoble()
+	{
+		return true;
+	}
 }
 
 class Tiger extends Body
 {
-	static final BodyType type = BodyType.T;
-	static final String Name = "Tiger";
-	static final char Initial = 'T';
+	BodyType type()
+	{
+		return BodyType.TIGER;
+	}
 
-	protected static final int rank = 3;
-	protected static final int speed = 4;
+	String name()
+	{
+		return "Tiger";
+	}
+
+	char initial()
+	{
+		return 'T';
+	}
+
+	int rank()
+	{
+		return 3;
+	}
+
+	int speed()
+	{
+		return 4;
+	}
 }
 
 class Monkey extends Body
 {
-	protected static final BodyType type = BodyType.M;
-	protected static final String Name = "Monkey";
-	protected static final char Initial = 'M';
+	BodyType type()
+	{
+		return BodyType.MONKEY;
+	}
 
-	protected static final int rank = 3;
-	protected static final int speed = 2;
+	String name()
+	{
+		return "Monkey";
+	}
+
+	char initial()
+	{
+		return 'M';
+	}
+
+	int rank()
+	{
+		return 3;
+	}
+
+	int speed()
+	{
+		return 2;
+	}
 
 	/* The Monkey can move in arcs. */
 	boolean canReach(Space S)
@@ -304,7 +401,7 @@ class Monkey extends Body
 		if (!Space.isValid(S))
 			return false;
 
-		if (Space.distance(owner.position, S) > speed)
+		if (Space.distance(owner.position, S) > speed())
 			return false;
 		// Purposefully removed: isStraight
 
@@ -350,13 +447,35 @@ class Monkey extends Body
 
 class Nightingale extends Body
 {
-	protected static final BodyType type = BodyType.N;
-	protected static final String Name = "Nightingale";
-	protected static final char Initial = 'N';
+	BodyType type()
+	{
+		return BodyType.NIGHTINGALE;
+	}
 
-	protected static final int rank = 2;
-	protected static final int speed = 4;
-	protected static final boolean noble = true;
+	String name()
+	{
+		return "Nightingale";
+	}
+
+	char initial()
+	{
+		return 'N';
+	}
+
+	int rank()
+	{
+		return 2;
+	}
+
+	int speed()
+	{
+		return 4;
+	}
+
+	boolean isNoble()
+	{
+		return true;
+	}
 
 	/* The Nightingale can fly. */
 	boolean isBlocked(Space S)
@@ -367,7 +486,7 @@ class Nightingale extends Body
 	/* Nightingale can capture Dragon. */
 	boolean outranks(Piece T)
 	{
-		if (T.getBodyType() == BodyType.D)
+		if (T.getBodyType() == BodyType.DRAGON)
 			return true;
 
 		return super.outranks(T);
@@ -376,11 +495,33 @@ class Nightingale extends Body
 
 class Lotus extends Body
 {
-	protected static final BodyType type = BodyType.L;
-	protected static final String Name = "Lotus";
-	protected static final char Initial = 'L';
+	BodyType type()
+	{
+		return BodyType.LOTUS;
+	}
 
-	protected static final int rank = 1;
-	protected static final int speed = 3;
-	protected static final boolean noble = true;
+	String name()
+	{
+		return "Lotus";
+	}
+
+	char initial()
+	{
+		return 'L';
+	}
+
+	int rank()
+	{
+		return 1;
+	}
+
+	int speed()
+	{
+		return 3;
+	}
+
+	boolean isNoble()
+	{
+		return true;
+	}
 }

@@ -90,15 +90,15 @@ class Board
 					if (S.isOccupied())
 					{
 						Piece P = S.getOccupant();
-						System.out.print("" + P.Initials());
+						System.out.print("" + P.initials());
 					}
 					else if (S.isGarden() || S.isPlaceable())
-						System.out.print("##");
+						System.out.print("<#>");
 					else
-						System.out.print("<>");
+						System.out.print("< >");
 				}
 				else
-					System.out.print("  ");
+					System.out.print("   ");
 			}
 			System.out.println(" ]");
 		}

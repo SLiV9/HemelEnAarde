@@ -20,7 +20,7 @@ public class Piece
 
 		index = count;
 		count++;
-		System.out.println("new: " + Name() + ";");
+		System.out.println("\tnew: p" + name() + ";");
 	}
 
 	/* Queries */
@@ -46,7 +46,7 @@ public class Piece
 
 	int getRank()
 	{
-		return B.getRank();
+		return B.rank();
 	}
 
 	boolean isOpposing(Piece other)
@@ -56,21 +56,21 @@ public class Piece
 
 	BodyType getBodyType()
 	{
-		return B.getType();
+		return B.type();
 	}
 
 	CharacterType getCharacterType()
 	{
-		return C.getType();
+		return C.type();
 	}
 
-	String Initials()
+	String initials()
 	{
-		return "" + Empires.Initial(E) + B.getInitial() + C.getInitial();
+		return "" + Empires.initial(E) + B.initial() + C.initial();
 	}
 
-	String Name()
+	String name()
 	{
-		return "" + Initials() + Integer.toString(index);
+		return "" + initials() + Integer.toString(index);
 	}
 }
