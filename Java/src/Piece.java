@@ -22,6 +22,11 @@ public class Piece
 		count++;
 		System.out.println("\tnew: p" + name() + ";");
 	}
+	
+	void setCharacter(Character c)
+	{
+		C = c;
+	}
 
 	/* Queries */
 	boolean canMove(Space S)
@@ -62,6 +67,11 @@ public class Piece
 	CharacterType getCharacterType()
 	{
 		return C.type();
+	}
+	
+	Empire getEmpire()
+	{
+		return E;
 	}
 
 	String initials()

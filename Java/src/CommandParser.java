@@ -7,10 +7,11 @@ class CommandParser extends LineParser
 	CommandParser()
 	{
 		FuncTable = new Hashtable<String, CommandFunc>();
-		CommandFunc cmake, cput, cremove;
+		CommandFunc cmake, cput, cremove, cset;
 		cmake = new CommandMake();
 		cput = new CommandPut();
 		cremove = new CommandRemove();
+		cset = new CommandSet();
 
 		FuncTable.put("make", cmake);
 		FuncTable.put("insert", cmake);
@@ -19,6 +20,8 @@ class CommandParser extends LineParser
 		FuncTable.put("remove", cremove);
 		FuncTable.put("destroy", cremove);
 		FuncTable.put("delete", cremove);
+		FuncTable.put("set", cset);
+		FuncTable.put("change", cset);
 	}
 
 	String parse(Board B, String command)

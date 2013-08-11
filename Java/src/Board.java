@@ -1,9 +1,12 @@
+import java.util.EnumMap;
+
 class Board
 {
 	private static final int WIDTH = 9;
 	private static final int HEIGHT = 5;
 
 	private Space[][] hex = new Space[2 * HEIGHT + 1][2 * WIDTH + 1];
+	private static EnumMap<Empire, EnumMap<BodyType, Piece>> piecesOnBoard;
 
 	Board()
 	{
@@ -24,6 +27,13 @@ class Board
 				setHex(r, c, new Space(this, r, c));
 			}
 		}
+
+		piecesOnBoard = new EnumMap<Empire, EnumMap<BodyType, Piece>>(
+				Empire.class);
+		piecesOnBoard.put(Empire.SOUTH, new EnumMap<BodyType, Piece>(
+				BodyType.class));
+		piecesOnBoard.put(Empire.NORTH, new EnumMap<BodyType, Piece>(
+				BodyType.class));
 	}
 
 	private void setHex(int r, int c, Space S)
@@ -36,14 +46,14 @@ class Board
 	{
 		return hex[HEIGHT + r][WIDTH + c];
 	}
-	
+
 	Space getSpace(String name)
 	{
 		int r, c;
 		char a, b;
 		a = name.charAt(0);
 		b = name.charAt(1);
-		
+
 		if (a >= 'a' && a <= 'k' && b >= '0' && b <= '9')
 		{
 			r = a - 'f';
@@ -56,10 +66,10 @@ class Board
 			c = '0' - a;
 			return getHex(r, c);
 		}
-		
+
 		return null;
 	}
-	
+
 	static String spacename(int r, int c)
 	{
 		if (c >= 0)
@@ -69,6 +79,52 @@ class Board
 		else
 		{
 			return "" + ('0' - c) + ('f' + r);
+		}
+	}
+	
+	/* Pieces on board */
+	Piece findPiece(Empire e, BodyType bt)
+	{
+		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(e);
+		if (poe == null)
+		{
+			return null;
+		}
+		
+		return poe.get(bt);
+	}
+	
+	boolean addPiece(Piece P)
+	{
+		if (P == null)
+			return false;
+		
+		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(P.getEmpire());
+		if (poe != null)
+		{
+			Piece oldp = poe.get(P.getBodyType());
+			if (oldp != null)
+			{
+				return false;
+			}
+			
+			poe.put(P.getBodyType(), P);
+		}
+		
+		return true;
+	}
+	
+	void removePiece(Empire e, BodyType bt)
+	{
+		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(e);
+		if (poe != null)
+		{
+			Piece P = poe.get(bt);
+			
+			Space S = P.position;
+			S.removeOccupant();
+			
+			poe.remove(bt);
 		}
 	}
 

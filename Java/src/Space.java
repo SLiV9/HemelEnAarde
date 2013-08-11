@@ -82,6 +82,18 @@ public class Space
 		
 		return true;
 	}
+	
+	boolean removeOccupant()
+	{
+		if (occupant == null)
+			return false;
+		
+		occupant.platform = null;
+		occupant.position = null;
+		occupant = null;
+		
+		return true;
+	}
 
 	/* A nifty validity checker. */
 	static boolean isValid(Space S)
