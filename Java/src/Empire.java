@@ -1,1 +1,1 @@
-enum Empire { SOUTH, NORTH };
+enum Empire { INVALID, SOUTH, NORTH };

@@ -1,7 +1,12 @@
+import java.util.Hashtable;
+
 public class Body
 {
+	/* Static queriables. */
+	private static Hashtable<String, BodyType> dictionaryOfTypes;
+
 	/* Body specific constants */
-	protected static final BodyType type = BodyType.L;
+	protected static final BodyType type = BodyType.INVALID;
 	protected static final String Name = "Unknown";
 	protected static final char Initial = '?';
 
@@ -9,25 +14,52 @@ public class Body
 	protected static final int speed = 3;
 	protected static final boolean noble = false;
 
-	/* Gadgets */
+	/* Instance specific gadgets */
 	protected Piece owner = null;
+
+	Body()
+	{
+		if (dictionaryOfTypes != null && type != BodyType.INVALID)
+		{
+			if (dictionaryOfTypes.get("" + Initial) == null)
+				dictionaryOfTypes.put("" + Initial, type);
+		}
+	}
+
+	/* Make (or clear) the list of body types. */
+	void makeTables()
+	{
+		dictionaryOfTypes = new Hashtable<String, BodyType>();
+	}
+
+	BodyType getType(char c)
+	{
+		if (dictionaryOfTypes == null)
+			return BodyType.INVALID;
+
+		BodyType t = dictionaryOfTypes.get("" + c);
+		if (t != null)
+			return t;
+		else
+			return BodyType.INVALID;
+	}
 
 	/* Queries */
 	BodyType getType()
 	{
 		return type;
 	}
-	
+
 	String getName()
 	{
 		return Name;
 	}
-	
+
 	char getInitial()
 	{
 		return Initial;
 	}
-	
+
 	int getRank()
 	{
 		return rank;
@@ -184,9 +216,9 @@ class Elephant extends Body
 
 	protected static final int rank = 4;
 	protected static final int speed = 2;
-	
+
 	protected static final int ATTACKRANGE = 4;
-	
+
 	/* The Elephant has longer range when attacking. */
 	boolean canCapture(Space S)
 	{

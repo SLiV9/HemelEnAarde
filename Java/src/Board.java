@@ -36,6 +36,41 @@ class Board
 	{
 		return hex[HEIGHT + r][WIDTH + c];
 	}
+	
+	Space getSpace(String name)
+	{
+		int r, c;
+		char a, b;
+		a = name.charAt(0);
+		b = name.charAt(1);
+		
+		if (a >= 'a' && a <= 'k' && b >= '0' && b <= '9')
+		{
+			r = a - 'f';
+			c = b - '0';
+			return getHex(r, c);
+		}
+		else if (b >= 'a' && b <= 'k' && a >= '0' && a <= '9')
+		{
+			r = b - 'f';
+			c = '0' - a;
+			return getHex(r, c);
+		}
+		
+		return null;
+	}
+	
+	static String spacename(int r, int c)
+	{
+		if (c >= 0)
+		{
+			return "" + ('f' + r) + ('0' + c);
+		}
+		else
+		{
+			return "" + ('0' - c) + ('f' + r);
+		}
+	}
 
 	/* Debug printing */
 	void print()

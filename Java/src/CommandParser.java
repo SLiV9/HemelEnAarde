@@ -1,7 +1,7 @@
 import java.util.Hashtable;
 
 class CommandParser extends LineParser
-{	
+{
 	private static Hashtable<String, CommandFunc> FuncTable;
 
 	CommandParser()
@@ -11,7 +11,7 @@ class CommandParser extends LineParser
 		cmake = new CommandMake();
 		cput = new CommandPut();
 		cremove = new CommandRemove();
-		
+
 		FuncTable.put("make", cmake);
 		FuncTable.put("insert", cmake);
 		FuncTable.put("put", cput);
@@ -36,13 +36,23 @@ class CommandParser extends LineParser
 			func = command.substring(0, posofarg);
 			arg = command.substring(posofarg + 1);
 		}
-		
+
 		CommandFunc C = FuncTable.get(func);
 		if (C == null)
 		{
 			return "what, invalid command";
 		}
-		
+
 		return C.exec(arg);
+	}
+
+	Empire getEmpire(char c)
+	{
+		if (c == 's')
+			return Empire.SOUTH;
+		else if (c == 'n')
+			return Empire.NORTH;
+		else
+			return Empire.INVALID;
 	}
 }
