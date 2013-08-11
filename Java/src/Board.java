@@ -21,7 +21,7 @@ class Board
 
 			for (int c = -rowwidth; c <= rowwidth; c += 2)
 			{
-				setHex(r, c, new Space(r, c));
+				setHex(r, c, new Space(this, r, c));
 			}
 		}
 	}

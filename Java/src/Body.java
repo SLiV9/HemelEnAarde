@@ -4,6 +4,9 @@ public class Body
 {
 	/* Static queriables. */
 	private static Hashtable<String, BodyType> dictionaryOfTypes;
+	
+	private static int count = 0;
+	private int index = 0;
 
 	/* Body specific constants */
 	protected static final BodyType type = BodyType.INVALID;
@@ -24,15 +27,54 @@ public class Body
 			if (dictionaryOfTypes.get("" + Initial) == null)
 				dictionaryOfTypes.put("" + Initial, type);
 		}
+		
+		index = count;
+		count++;
+		System.out.println("new: " + Initial + Integer.toString(index) + ";");
 	}
 
 	/* Make (or clear) the list of body types. */
-	void makeTables()
+	static void makeTables()
 	{
 		dictionaryOfTypes = new Hashtable<String, BodyType>();
 	}
+	
+	static void fillTables()
+	{
+		/* Only add existing and valid body types. */
+		new Dragon();
+		new Elephant();
+		new Panda();
+		new Tiger();
+		new Monkey();
+		new Nightingale();
+		new Lotus();
+	}
+	
+	static Body create(BodyType bt)
+	{
+		switch (bt)
+		{
+		case D:
+			return new Dragon();
+		case E:
+			return new Elephant();
+		case P:
+			return new Panda();
+		case T:
+			return new Tiger();
+		case M:
+			return new Monkey();
+		case N:
+			return new Nightingale();
+		case L:
+			return new Lotus();
+		default:
+			return null;
+		}
+	}
 
-	BodyType getType(char c)
+	static BodyType getType(char c)
 	{
 		if (dictionaryOfTypes == null)
 			return BodyType.INVALID;

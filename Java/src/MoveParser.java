@@ -5,7 +5,7 @@ class MoveParser extends LineParser
 		
 	}
 	
-	String parse(String move)
+	String parse(Board B, String move)
 	{
 		return "what, unparsable";
 	}

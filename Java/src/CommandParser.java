@@ -21,7 +21,7 @@ class CommandParser extends LineParser
 		FuncTable.put("delete", cremove);
 	}
 
-	String parse(String command)
+	String parse(Board B, String command)
 	{
 		String func, arg;
 
@@ -43,16 +43,6 @@ class CommandParser extends LineParser
 			return "what, invalid command";
 		}
 
-		return C.exec(arg);
-	}
-
-	Empire getEmpire(char c)
-	{
-		if (c == 's')
-			return Empire.SOUTH;
-		else if (c == 'n')
-			return Empire.NORTH;
-		else
-			return Empire.INVALID;
+		return C.exec(B, arg);
 	}
 }

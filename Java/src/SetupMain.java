@@ -8,15 +8,12 @@ public class SetupMain
 
 		Board B = new Board();
 		LineParser LP = new LineParser(new CommandParser(), new MoveParser());
-		LP.setPlatform(B);
+		Body.makeTables();
+		Body.fillTables();
+		Character.makeTables();
+		Character.fillTables();
+		
 		Scanner sc = new Scanner(System.in);
-
-		// TODO: player initiation
-
-		// TODO: piece placement
-
-		// TODO: game loop
-
 		String command, result;
 		for (int i = 0; i < 1000; i++)
 		{
@@ -28,7 +25,7 @@ public class SetupMain
 				break;
 			}
 
-			result = LP.parse(command);
+			result = LP.parse(B, command);
 			System.out.println("\t>> " + result);
 			
 			if (result.contains("ok"))
@@ -36,6 +33,12 @@ public class SetupMain
 				B.print();
 			}
 		}
+		
+		// TODO: player initiation
+
+		// TODO: piece placement
+
+		// TODO: game loop
 
 		System.out.println("\n[ done ]");
 	}

@@ -6,6 +6,7 @@ public class Space
 	}
 
 	private SpaceType type = SpaceType.INVALID;
+	private Board platform = null;
 	private Piece occupant = null;
 
 	int row;
@@ -13,17 +14,18 @@ public class Space
 
 	private static Space center = new Space(true);
 
-	private Space(boolean b)
+	private Space(boolean isorigin)
 	{
-		if (b)
+		if (isorigin)
 		{
 			row = 0;
 			col = 0;
 		}
 	}
 
-	public Space(int r, int c)
+	public Space(Board b, int r, int c)
 	{
+		platform = b;
 		row = r;
 		col = c;
 
@@ -67,6 +69,18 @@ public class Space
 	Piece getOccupant()
 	{
 		return occupant;
+	}
+	
+	boolean addOccupant(Piece P)
+	{
+		if (occupant != null)
+			return false;
+		
+		occupant = P;
+		P.platform = platform;
+		P.position = this;
+		
+		return true;
 	}
 
 	/* A nifty validity checker. */

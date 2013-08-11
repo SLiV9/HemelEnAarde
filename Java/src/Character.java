@@ -4,6 +4,9 @@ public class Character
 {
 	/* Static queriables. */
 	private static Hashtable<String, CharacterType> dictionaryOfTypes;
+	
+	private static int count = 0;
+	private int index = 0;
 
 	/* Character specific constants */
 	protected static final CharacterType type = CharacterType.INVALID;
@@ -20,15 +23,41 @@ public class Character
 			if (dictionaryOfTypes.get("" + Initial) == null)
 				dictionaryOfTypes.put("" + Initial, type);
 		}
+		
+		index = count;
+		count++;
+		System.out.println("new: " + Initial + Integer.toString(index) + ";");
 	}
 
 	/* Make (or clear) the list of body types. */
-	void makeTables()
+	static void makeTables()
 	{
 		dictionaryOfTypes = new Hashtable<String, CharacterType>();
 	}
+	
+	static void fillTables()
+	{
+		/* Only add existing and valid body types. */
+		new Farmer();
+	}
+	
+	static Character create(CharacterType ct)
+	{
+		switch (ct)
+		{
+		case F:
+			return new Farmer();
+		default:
+			return null;
+		}
+	}
+	
+	static Character create()
+	{
+		return new Farmer();
+	}
 
-	CharacterType getType(char c)
+	static CharacterType getType(char c)
 	{
 		if (dictionaryOfTypes == null)
 			return CharacterType.INVALID;

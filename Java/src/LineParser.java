@@ -1,7 +1,5 @@
 class LineParser
 {
-	protected static Board platform;
-
 	private static CommandParser CP;
 	private static MoveParser MP;
 
@@ -15,23 +13,17 @@ class LineParser
 		CP = cp;
 		MP = mp;
 	}
-
-	void setPlatform(Board B)
-	{
-		platform = B;
-	}
-
-	String parse(String command)
+	String parse(Board B, String command)
 	{
 		String resultm, resultc;
 
-		resultm = MP.parse(command);
+		resultm = MP.parse(B, command);
 		if (!resultm.contains("what"))
 		{
 			return resultm;
 		}
 
-		resultc = CP.parse(command);
+		resultc = CP.parse(B, command);
 		if (!resultc.contains("what"))
 		{
 			return resultc;
