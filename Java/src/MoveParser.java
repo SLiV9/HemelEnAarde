@@ -93,23 +93,35 @@ class MoveParser extends LineParser
 		}
 		else if (ct == CharacterType.GENERAL)
 		{
-			if (movetype != 'x')
+			if (movetype == 'x')
+			{
+				if (P.canCaptureX(S))
+				{
+					return tryCapture(P, oldpos, S);
+				}
+				else
+					return "fail, illegal move";
+			}
+			else
 			{
 				return "fail, general must capture";
 			}
-
-			// TODO: general captures
-			return "fail, general not implemented";
 		}
 		else if (ct == CharacterType.HUNTER)
 		{
-			if (movetype != 'x')
+			if (movetype == 'x')
+			{
+				if (P.canCaptureX(S))
+				{
+					return tryCapture(P, oldpos, S);
+				}
+				else
+					return "fail, illegal move";
+			}
+			else
 			{
 				return "fail, hunter must capture";
 			}
-
-			// TODO: hunter captures
-			return "fail, hunter not implemented";
 		}
 		else if (ct == CharacterType.STRATEGIST)
 		{

@@ -35,6 +35,8 @@ public class Character
 	{
 		/* Only add existing and valid body types. */
 		new Empress();
+		new General();
+		new Hunter();
 		new Farmer();
 	}
 
@@ -44,6 +46,10 @@ public class Character
 		{
 		case EMPRESS:
 			return new Empress();
+		case GENERAL:
+			return new General();
+		case HUNTER:
+			return new Hunter();
 		case FARMER:
 			return new Farmer();
 		default:
@@ -132,6 +138,7 @@ class Empress extends Character
 			return false;
 		}
 
+		// Empress is always noble.
 		if (!S.isGarden())
 		{
 			System.out.println("\t[not garden]");
@@ -166,6 +173,7 @@ class Empress extends Character
 			return false;
 		}
 
+		// Empress is always noble.
 		if (!S.isGarden())
 		{
 			System.out.println("\t[not garden]");
@@ -187,6 +195,135 @@ class Empress extends Character
 		}
 
 		if (!owner.isCapable(target))
+		{
+			System.out.println("\t[not capable]");
+			return false;
+		}
+
+		return true;
+	}
+}
+
+class General extends Character
+{
+	CharacterType type()
+	{
+		return CharacterType.GENERAL;
+	}
+
+	String name()
+	{
+		return "General";
+	}
+
+	char initial()
+	{
+		return 'G';
+	}
+	
+	boolean canCapture(Space S)
+	{
+		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
+			return false;
+		}
+		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
+			return false;
+		}
+
+		if (!owner.canReachAttacking(S))
+		{
+			System.out.println("\t[cannot reach]");
+			return false;
+		}
+
+		if (owner.isIgnoble(S))
+		{
+			System.out.println("\t[ignoble]");
+			return false;
+		}
+
+		if (!S.isOccupied())
+		{
+			System.out.println("\t[not occupied]");
+			return false;
+		}
+		
+		Piece target = S.getOccupant();
+
+		if (!owner.isOpposing(target))
+		{
+			System.out.println("\t[not opposing]");
+			return false;
+		}
+
+		// General is always capable.
+
+		return true;
+	}
+}
+
+class Hunter extends Character
+{
+	CharacterType type()
+	{
+		return CharacterType.HUNTER;
+	}
+
+	String name()
+	{
+		return "Hunter";
+	}
+
+	char initial()
+	{
+		return 'H';
+	}
+	
+	boolean canCapture(Space S)
+	{
+		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
+			return false;
+		}
+		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
+			return false;
+		}
+
+		if (!owner.canReachAttacking(S))
+		{
+			System.out.println("\t[cannot reach]");
+			return false;
+		}
+
+		if (owner.isIgnoble(S))
+		{
+			System.out.println("\t[ignoble]");
+			return false;
+		}
+
+		if (!S.isOccupied())
+		{
+			System.out.println("\t[not occupied]");
+			return false;
+		}
+		
+		Piece target = S.getOccupant();
+
+		if (!owner.isOpposing(target))
+		{
+			System.out.println("\t[not opposing]");
+			return false;
+		}
+		
+		// Hunter is capable of capturing Rank 4.
+		if (target.getRank() != 4)
 		{
 			System.out.println("\t[not capable]");
 			return false;

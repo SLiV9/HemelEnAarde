@@ -79,6 +79,11 @@ public class Piece
 		return C.canCapture(S);
 	}
 	
+	boolean isIgnoble(Space S)
+	{
+		return B.isIgnoble(S);
+	}
+	
 	boolean isCapable(Piece T)
 	{
 		return B.isCapable(T);
