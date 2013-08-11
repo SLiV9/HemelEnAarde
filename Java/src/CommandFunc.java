@@ -73,6 +73,10 @@ class CommandPut implements CommandFunc
 			return "fail, piece does not exist";
 		}
 		Space oldpos = P.position;
+		if (oldpos == null)
+		{
+			return "error, piece has no position";
+		}
 		
 		Space s = B.getSpace(arg.substring(2));
 		if (s == null)

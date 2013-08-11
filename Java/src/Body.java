@@ -138,18 +138,21 @@ public class Body
 		if (Space.distance(owner.position, S) <= 1)
 			return false;
 
-		int dr, dc, sr, sc, adc, opr, opc;
+		int dr, dc, sr, sc, adc, dbl, opr, opc;
 		opr = owner.position.row;
 		opc = owner.position.col;
 		dr = S.row - opr;
 		dc = S.col - opc;
 		sr = Integer.signum(dr);
 		sc = Integer.signum(dc);
+		dbl = 1;
+		if (sr == 0)
+			dbl = 2;
 		adc = Math.abs(dc);
 
-		for (int i = 1; i < adc; i++)
+		for (int i = 1; i < adc; i += dbl)
 		{
-			if (isBlocked(opr + sr * i, opc + sc * i))
+			if (isBlocked(opr + sr * i, opc + dbl * sc * i))
 				return true;
 		}
 
@@ -160,6 +163,12 @@ public class Body
 	{
 		Space A;
 		A = owner.platform.getHex(r, c);
+		if (A == null)
+		{
+			System.out.println("{ error: no space at "
+					+ Board.spacename(r, c) + " }");
+			return true;
+		}
 		if (A.isOccupied())
 		{
 			if (A.getOccupant().isOpposing(owner))

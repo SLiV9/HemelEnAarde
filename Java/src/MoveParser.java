@@ -24,6 +24,11 @@ class MoveParser extends LineParser
 		{
 			return "fail, piece does not exist";
 		}
+		Space oldpos = P.position;
+		if (oldpos == null)
+		{
+			return "error, piece has no position";
+		}
 
 		int argpos = 2;
 		CharacterType ct = Character.getType(arg.charAt(argpos));
@@ -54,8 +59,8 @@ class MoveParser extends LineParser
 			break;
 		}
 
-		Space s = B.getSpace(arg.substring(argpos));
-		if (s == null)
+		Space S = B.getSpace(arg.substring(argpos));
+		if (S == null)
 		{
 			return "fail, unknown space or invalid syntax";
 		}
@@ -115,8 +120,18 @@ class MoveParser extends LineParser
 		{
 			if (movetype == 'm')
 			{
-				// TODO: movement
-				return "fail, movement not implemented";
+				if (P.canMove(S))
+				{
+					if (S.addOccupant(P) == false)
+					{
+						return "fail, space could not be occupied";
+					}
+					oldpos.removeOccupant();
+					
+					return "ok, " + P.name() + " to " + S.name();
+				}
+				
+				return "fail, illegal move";
 			}
 			else if (movetype == 'x')
 			{
@@ -125,7 +140,7 @@ class MoveParser extends LineParser
 			}
 			else
 			{
-				return "fail, illegal movetype";
+				return "fail, invalid movetype";
 			}
 		}
 	}

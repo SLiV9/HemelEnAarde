@@ -16,16 +16,36 @@ public class Piece
 	{
 		E = e;
 		B = Body.create(bt);
+		if (B == null)
+		{
+			System.out.println("{ error: could not create body of type " + bt
+					+ "}");
+		}
+		else
+			B.owner = this;
+
 		C = Character.create();
+		if (C == null)
+		{
+			System.out.println("{ error: could not create default character }");
+		}
+		else
+			C.owner = this;
 
 		index = count;
 		count++;
 		System.out.println("\tnew: p" + name() + ";");
 	}
-	
+
 	void setCharacter(Character c)
 	{
 		C = c;
+		if (C == null)
+		{
+			System.out.println("{ error: character to set is null }");
+		}
+		else
+			C.owner = this;
 	}
 
 	/* Queries */
@@ -68,7 +88,7 @@ public class Piece
 	{
 		return C.type();
 	}
-	
+
 	Empire getEmpire()
 	{
 		return E;

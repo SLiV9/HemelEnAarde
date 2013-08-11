@@ -81,7 +81,7 @@ class Board
 			return "" + ((char) ('0' - c)) + ((char) ('f' + r));
 		}
 	}
-	
+
 	/* Pieces on board */
 	Piece findPiece(Empire e, BodyType bt)
 	{
@@ -90,15 +90,15 @@ class Board
 		{
 			return null;
 		}
-		
+
 		return poe.get(bt);
 	}
-	
+
 	boolean addPiece(Piece P)
 	{
 		if (P == null)
 			return false;
-		
+
 		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(P.getEmpire());
 		if (poe != null)
 		{
@@ -107,23 +107,26 @@ class Board
 			{
 				return false;
 			}
-			
+
 			poe.put(P.getBodyType(), P);
 		}
-		
+
 		return true;
 	}
-	
+
 	void removePiece(Empire e, BodyType bt)
 	{
 		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(e);
 		if (poe != null)
 		{
 			Piece P = poe.get(bt);
-			
+
 			Space S = P.position;
-			S.removeOccupant();
-			
+			if (S != null)
+			{
+				S.removeOccupant();
+			}
+
 			poe.remove(bt);
 		}
 	}

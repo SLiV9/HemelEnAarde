@@ -50,7 +50,7 @@ public class Space
 	{
 		return Board.spacename(row, col);
 	}
-	
+
 	boolean isGarden()
 	{
 		return (type == SpaceType.GARDEN);
@@ -75,28 +75,31 @@ public class Space
 	{
 		return occupant;
 	}
-	
+
 	boolean addOccupant(Piece P)
 	{
 		if (occupant != null)
 			return false;
-		
+
 		occupant = P;
 		P.platform = platform;
 		P.position = this;
-		
+
 		return true;
 	}
-	
+
 	boolean removeOccupant()
 	{
 		if (occupant == null)
 			return false;
-		
-		occupant.platform = null;
-		occupant.position = null;
+
+		if (occupant.position == this)
+		{
+			occupant.platform = null;
+			occupant.position = null;
+		}
 		occupant = null;
-		
+
 		return true;
 	}
 
