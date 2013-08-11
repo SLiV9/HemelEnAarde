@@ -34,6 +34,7 @@ public class Character
 	static void fillTables()
 	{
 		/* Only add existing and valid body types. */
+		new Empress();
 		new Farmer();
 	}
 
@@ -41,6 +42,8 @@ public class Character
 	{
 		switch (ct)
 		{
+		case EMPRESS:
+			return new Empress();
 		case FARMER:
 			return new Farmer();
 		default:
@@ -93,7 +96,105 @@ public class Character
 	}
 }
 
-// TODO: andere characters
+class Empress extends Character
+{
+	CharacterType type()
+	{
+		return CharacterType.EMPRESS;
+	}
+
+	String name()
+	{
+		return "Empress";
+	}
+
+	char initial()
+	{
+		return 'Q';
+	}
+	
+	boolean canMove(Space S)
+	{
+		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
+			return false;
+		}
+		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
+			return false;
+		}
+
+		if (!owner.canReach(S))
+		{
+			System.out.println("\t[cannot reach]");
+			return false;
+		}
+
+		if (!S.isGarden())
+		{
+			System.out.println("\t[not garden]");
+			return false;
+		}
+
+		if (S.isOccupied())
+		{
+			System.out.println("\t[occupied]");
+			return false;
+		}
+
+		return true;
+	}
+	
+	boolean canCapture(Space S)
+	{
+		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
+			return false;
+		}
+		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
+			return false;
+		}
+
+		if (!owner.canReachAttacking(S))
+		{
+			System.out.println("\t[cannot reach]");
+			return false;
+		}
+
+		if (!S.isGarden())
+		{
+			System.out.println("\t[not garden]");
+			return false;
+		}
+
+		if (!S.isOccupied())
+		{
+			System.out.println("\t[not occupied]");
+			return false;
+		}
+		
+		Piece target = S.getOccupant();
+
+		if (!owner.isOpposing(target))
+		{
+			System.out.println("\t[not opposing]");
+			return false;
+		}
+
+		if (!owner.isCapable(target))
+		{
+			System.out.println("\t[not capable]");
+			return false;
+		}
+
+		return true;
+	}
+}
 
 // TODO: speciale acties van strategist en alchemist
 

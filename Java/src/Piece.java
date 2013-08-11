@@ -49,6 +49,16 @@ public class Piece
 	}
 
 	/* Queries */
+	boolean canReach(Space S)
+	{
+		return B.canReach(S);
+	}
+	
+	boolean canReachAttacking(Space S)
+	{
+		return B.canReachAttacking(S);
+	}
+	
 	boolean canMove(Space S)
 	{
 		return B.canMove(S);
@@ -67,6 +77,11 @@ public class Piece
 	boolean canCaptureX(Space S)
 	{
 		return C.canCapture(S);
+	}
+	
+	boolean isCapable(Piece T)
+	{
+		return B.isCapable(T);
 	}
 
 	int getRank()

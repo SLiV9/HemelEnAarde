@@ -68,13 +68,28 @@ class MoveParser extends LineParser
 		/* Interpret move */
 		if (ct == CharacterType.EMPRESS)
 		{
-			if (movetype != 'm' && movetype != 'x')
+			if (movetype == 'm')
+			{
+				if (P.canMoveX(S))
+				{
+					return tryMove(P, oldpos, S);
+				}
+				else
+					return "fail, illegal move";
+			}
+			else if (movetype == 'x')
+			{
+				if (P.canCaptureX(S))
+				{
+					return tryCapture(P, oldpos, S);
+				}
+				else
+					return "fail, illegal move";
+			}
+			else
 			{
 				return "fail, empress must move or capture";
 			}
-
-			// TODO: empress moves or captures
-			return "fail, empress not implemented";
 		}
 		else if (ct == CharacterType.GENERAL)
 		{
@@ -122,40 +137,51 @@ class MoveParser extends LineParser
 			{
 				if (P.canMove(S))
 				{
-					if (S.addOccupant(P) == false)
-					{
-						return "fail, space could not be occupied";
-					}
-					oldpos.removeOccupant();
-
-					return "ok, " + P.name() + " to " + S.name();
+					return tryMove(P, oldpos, S);
 				}
-
-				return "fail, illegal move";
+				else
+					return "fail, illegal move";
 			}
 			else if (movetype == 'x')
 			{
 				if (P.canCapture(S))
 				{
-					Piece oldpiece = S.getOccupant();
-					S.removeOccupant();
-					if (S.addOccupant(P) == false)
-					{
-						S.addOccupant(oldpiece);
-						return "error, space could not be taken over";
-					}
-					oldpos.removeOccupant();
-
-					return "ok, " + P.name() + " captured " + oldpiece.name()
-							+ "* at " + S.name();
+					return tryCapture(P, oldpos, S);
 				}
-
-				return "fail, illegal move";
+				else
+					return "fail, illegal move";
 			}
 			else
 			{
 				return "fail, invalid movetype";
 			}
 		}
+	}
+
+	private String tryMove(Piece P, Space oldpos, Space S)
+	{
+
+		if (S.addOccupant(P) == false)
+		{
+			return "fail, space could not be occupied";
+		}
+		oldpos.removeOccupant();
+
+		return "ok, " + P.name() + " to " + S.name();
+	}
+
+	private String tryCapture(Piece P, Space oldpos, Space S)
+	{
+		Piece oldpiece = S.getOccupant();
+		S.removeOccupant();
+		if (S.addOccupant(P) == false)
+		{
+			S.addOccupant(oldpiece);
+			return "error, space could not be taken over";
+		}
+		oldpos.removeOccupant();
+
+		return "ok, " + P.name() + " captured " + oldpiece.name() + "* at "
+				+ S.name();
 	}
 }

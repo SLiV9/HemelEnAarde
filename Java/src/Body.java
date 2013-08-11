@@ -103,6 +103,11 @@ public class Body
 	{
 		return 3;
 	}
+	
+	int attackspeed()
+	{
+		return speed();
+	}
 
 	boolean isNoble()
 	{
@@ -113,6 +118,11 @@ public class Body
 	boolean canReach(Space S)
 	{
 		return canReach(S, speed());
+	}
+	
+	boolean canReachAttacking(Space S)
+	{
+		return canReach(S, attackspeed());
 	}
 
 	protected boolean canReach(Space S, int spd)
@@ -234,11 +244,6 @@ public class Body
 
 	boolean canCapture(Space S)
 	{
-		return canCapture(S, speed());
-	}
-
-	protected boolean canCapture(Space S, int spd)
-	{
 		if (!Space.isValid(S))
 		{
 			System.out.println("\t[space invalid]");
@@ -250,7 +255,7 @@ public class Body
 			return false;
 		}
 
-		if (!canReach(S, spd))
+		if (!canReachAttacking(S))
 		{
 			System.out.println("\t[cannot reach]");
 			return false;
@@ -355,12 +360,10 @@ class Elephant extends Body
 		return 2;
 	}
 
-	protected int ATTACKRANGE = 4;
-
 	/* The Elephant has longer range when attacking. */
-	protected boolean canCapture(Space S)
+	int attackrange()
 	{
-		return canCapture(S, ATTACKRANGE);
+		return 4;
 	}
 }
 
