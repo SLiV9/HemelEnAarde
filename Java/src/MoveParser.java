@@ -41,8 +41,12 @@ class MoveParser extends LineParser
 
 			if (ct == CharacterType.EMPEROR)
 			{
-				// TODO: emperor wins
-				return "fail, emperor not implemented";
+				if (P.inOpposingCity())
+				{
+					return "ok, player wins!";
+				}
+				
+				return "fail, not in opponents city";
 			}
 
 			argpos++;

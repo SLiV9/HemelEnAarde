@@ -12,6 +12,16 @@ class Empires
 			return Empire.INVALID;
 	}
 	
+	static Empire opponent(Empire e)
+	{
+		if (e == Empire.SOUTH)
+			return Empire.NORTH;
+		else if (e == Empire.NORTH)
+			return Empire.SOUTH;
+		else 
+			return Empire.INVALID;
+	}
+	
 	static char initial(Empire e)
 	{
 		if (e == Empire.SOUTH)

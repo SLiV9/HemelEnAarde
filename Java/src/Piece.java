@@ -53,12 +53,12 @@ public class Piece
 	{
 		return B.canReach(S);
 	}
-	
+
 	boolean canReachAttacking(Space S)
 	{
 		return B.canReachAttacking(S);
 	}
-	
+
 	boolean canMove(Space S)
 	{
 		return B.canMove(S);
@@ -78,12 +78,12 @@ public class Piece
 	{
 		return C.canCapture(S);
 	}
-	
+
 	boolean isIgnoble(Space S)
 	{
 		return B.isIgnoble(S);
 	}
-	
+
 	boolean isCapable(Piece T)
 	{
 		return B.isCapable(T);
@@ -97,6 +97,12 @@ public class Piece
 	boolean isOpposing(Piece other)
 	{
 		return (other.E != E);
+	}
+
+	boolean inOpposingCity()
+	{
+		return (position.isCity() && platform.inEmpiresHalf(position,
+				Empires.opponent(E)));
 	}
 
 	BodyType getBodyType()

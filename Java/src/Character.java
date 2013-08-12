@@ -34,6 +34,7 @@ public class Character
 	static void fillTables()
 	{
 		/* Only add existing and valid body types. */
+		new Emperor();
 		new Empress();
 		new General();
 		new Hunter();
@@ -44,6 +45,8 @@ public class Character
 	{
 		switch (ct)
 		{
+		case EMPEROR:
+			return new Emperor();
 		case EMPRESS:
 			return new Empress();
 		case GENERAL:
@@ -99,6 +102,24 @@ public class Character
 	boolean canCapture(Space S)
 	{
 		return false;
+	}
+}
+
+class Emperor extends Character
+{
+	CharacterType type()
+	{
+		return CharacterType.EMPEROR;
+	}
+
+	String name()
+	{
+		return "Emperor";
+	}
+
+	char initial()
+	{
+		return 'K';
 	}
 }
 

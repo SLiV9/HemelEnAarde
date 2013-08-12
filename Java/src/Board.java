@@ -8,6 +8,8 @@ class Board
 	private Space[][] hex = new Space[2 * HEIGHT + 1][2 * WIDTH + 1];
 	private static EnumMap<Empire, EnumMap<BodyType, Piece>> piecesOnBoard;
 
+	private final boolean southAtBottom = true;
+
 	Board()
 	{
 		/*
@@ -42,6 +44,26 @@ class Board
 	}
 
 	/* Queries */
+	boolean inEmpiresHalf(Space S, Empire e)
+	{
+		if (southAtBottom)
+		{
+			if (S.row < 0 && e == Empire.SOUTH)
+				return true;
+			else if (S.row > 0 && e == Empire.NORTH)
+				return true;
+		}
+		else
+		{
+			if (S.row > 0 && e == Empire.SOUTH)
+				return true;
+			else if (S.row < 0 && e == Empire.NORTH)
+				return true;
+		}
+
+		return false;
+	}
+
 	Space getHex(int r, int c)
 	{
 		return hex[HEIGHT + r][WIDTH + c];
@@ -113,12 +135,12 @@ class Board
 
 		return true;
 	}
-	
+
 	void removePiece(Piece P)
 	{
 		if (P == null)
 			return;
-		
+
 		removePiece(P.getEmpire(), P.getBodyType());
 	}
 
