@@ -7,11 +7,11 @@ public class Character
 
 	private static int count = 0;
 	private int index = 0;
-	
+
 	/* Gadgets */
 	protected Piece owner = null;
 
-	Character()
+	protected Character()
 	{
 		if (dictionaryOfTypes != null && type() != CharacterType.INVALID)
 		{
@@ -37,7 +37,9 @@ public class Character
 		new Emperor();
 		new Empress();
 		new General();
+		new Strategist();
 		new Hunter();
+		new Alchemist();
 		new Farmer();
 	}
 
@@ -51,8 +53,12 @@ public class Character
 			return new Empress();
 		case GENERAL:
 			return new General();
+		case STRATEGIST:
+			return new Strategist();
 		case HUNTER:
 			return new Hunter();
+		case ALCHEMIST:
+			return new Alchemist();
 		case FARMER:
 			return new Farmer();
 		default:
@@ -103,6 +109,11 @@ public class Character
 	{
 		return false;
 	}
+	
+	boolean canAim(Space S)
+	{
+		return false;
+	}
 }
 
 class Emperor extends Character
@@ -139,7 +150,7 @@ class Empress extends Character
 	{
 		return 'Q';
 	}
-	
+
 	boolean canMove(Space S)
 	{
 		if (!Space.isValid(S))
@@ -174,7 +185,7 @@ class Empress extends Character
 
 		return true;
 	}
-	
+
 	boolean canCapture(Space S)
 	{
 		if (!Space.isValid(S))
@@ -206,7 +217,7 @@ class Empress extends Character
 			System.out.println("\t[not occupied]");
 			return false;
 		}
-		
+
 		Piece target = S.getOccupant();
 
 		if (!owner.isOpposing(target))
@@ -241,7 +252,7 @@ class General extends Character
 	{
 		return 'G';
 	}
-	
+
 	boolean canCapture(Space S)
 	{
 		if (!Space.isValid(S))
@@ -272,7 +283,7 @@ class General extends Character
 			System.out.println("\t[not occupied]");
 			return false;
 		}
-		
+
 		Piece target = S.getOccupant();
 
 		if (!owner.isOpposing(target))
@@ -282,6 +293,64 @@ class General extends Character
 		}
 
 		// General is always capable.
+
+		return true;
+	}
+}
+
+class Strategist extends Character
+{
+	CharacterType type()
+	{
+		return CharacterType.STRATEGIST;
+	}
+
+	String name()
+	{
+		return "Strategist";
+	}
+
+	char initial()
+	{
+		return 'S';
+	}
+	
+	boolean canAim(Space S)
+	{
+		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
+			return false;
+		}
+		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
+			return false;
+		}
+
+		if (!owner.canReach(S))
+		{
+			System.out.println("\t[cannot reach]");
+			return false;
+		}
+
+		// Strategist ignores the Garden
+
+		if (!S.isOccupied())
+		{
+			System.out.println("\t[not occupied]");
+			return false;
+		}
+
+		Piece target = S.getOccupant();
+
+		if (!owner.isOpposing(target))
+		{
+			System.out.println("\t[not opposing]");
+			return false;
+		}
+
+		// Strategist is always capable.
 
 		return true;
 	}
@@ -303,7 +372,7 @@ class Hunter extends Character
 	{
 		return 'H';
 	}
-	
+
 	boolean canCapture(Space S)
 	{
 		if (!Space.isValid(S))
@@ -334,7 +403,7 @@ class Hunter extends Character
 			System.out.println("\t[not occupied]");
 			return false;
 		}
-		
+
 		Piece target = S.getOccupant();
 
 		if (!owner.isOpposing(target))
@@ -342,7 +411,7 @@ class Hunter extends Character
 			System.out.println("\t[not opposing]");
 			return false;
 		}
-		
+
 		// Hunter is capable of capturing Rank 4.
 		if (target.getRank() != 4)
 		{
@@ -354,7 +423,63 @@ class Hunter extends Character
 	}
 }
 
-// TODO: speciale acties van strategist en alchemist
+class Alchemist extends Character
+{
+	CharacterType type()
+	{
+		return CharacterType.ALCHEMIST;
+	}
+
+	String name()
+	{
+		return "Alchemist";
+	}
+
+	char initial()
+	{
+		return 'A';
+	}
+	
+	boolean canAim(Space S)
+	{
+		if (!Space.isValid(S))
+		{
+			System.out.println("\t[space invalid]");
+			return false;
+		}
+		if (S.equals(owner.position))
+		{
+			System.out.println("\t[zero movement]");
+			return false;
+		}
+
+		if (!owner.position.isAdjacent(S))
+		{
+			System.out.println("\t[not adjacent]");
+			return false;
+		}
+
+		// Alchemist ignores the Garden
+
+		if (!S.isOccupied())
+		{
+			System.out.println("\t[not occupied]");
+			return false;
+		}
+
+		Piece target = S.getOccupant();
+
+		if (!owner.isOpposing(target))
+		{
+			System.out.println("\t[not opposing]");
+			return false;
+		}
+
+		// Alchemist is always capable.
+
+		return true;
+	}
+}
 
 class Farmer extends Character
 {

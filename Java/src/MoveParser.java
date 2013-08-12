@@ -134,8 +134,12 @@ class MoveParser extends LineParser
 				return "fail, strategist must inspect";
 			}
 
-			// TODO: strategist inspects
-			return "fail, strategist not implemented";
+			if (P.canAim(S))
+			{
+				return tryInspect(P, oldpos, S);
+			}
+			else
+				return "fail, illegal move";
 		}
 		else if (ct == CharacterType.ALCHEMIST)
 		{
@@ -144,8 +148,12 @@ class MoveParser extends LineParser
 				return "fail, alchemist must remove";
 			}
 
-			// TODO: alchemist removes
-			return "fail, alchemist not implemented";
+			if (P.canAim(S))
+			{
+				return tryShoot(P, oldpos, S);
+			}
+			else
+				return "fail, illegal move";
 		}
 		else
 		{
@@ -198,6 +206,24 @@ class MoveParser extends LineParser
 		oldpos.removeOccupant();
 
 		return "ok, " + P.name() + " captured " + oldpiece.name() + "* at "
+				+ S.name();
+	}
+
+	private String tryShoot(Piece P, Space oldpos, Space S)
+	{
+		Piece oldpiece = S.getOccupant();
+		S.removeOccupant();
+
+		return "ok, " + P.name() + " removed " + oldpiece.name() + "* at "
+				+ S.name();
+	}
+
+	private String tryInspect(Piece P, Space oldpos, Space S)
+	{
+		Piece oldpiece = S.getOccupant();
+		// TODO: Strategist should reveal something
+
+		return "ok, " + P.name() + " inspected " + oldpiece.name() + " at "
 				+ S.name();
 	}
 }

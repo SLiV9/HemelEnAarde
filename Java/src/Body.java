@@ -11,7 +11,7 @@ public class Body
 	/* Instance specific gadgets */
 	protected Piece owner = null;
 
-	Body()
+	protected Body()
 	{
 		if (dictionaryOfTypes != null && type() != BodyType.INVALID)
 		{

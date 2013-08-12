@@ -70,6 +70,11 @@ public class Space
 	{
 		return (occupant != null);
 	}
+	
+	boolean isAdjacent(Space other)
+	{
+		return (distance(this, other) == 1);
+	}
 
 	Piece getOccupant()
 	{
@@ -130,7 +135,7 @@ public class Space
 
 		return false;
 	}
-
+	
 	/*
 	 * Given two (valid) spaces, returns the distance (in spaces) between them.
 	 */

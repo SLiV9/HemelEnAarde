@@ -78,6 +78,11 @@ public class Piece
 	{
 		return C.canCapture(S);
 	}
+	
+	boolean canAim(Space S)
+	{
+		return C.canAim(S);
+	}
 
 	boolean isIgnoble(Space S)
 	{
