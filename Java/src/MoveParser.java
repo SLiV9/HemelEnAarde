@@ -117,9 +117,7 @@ class MoveParser extends LineParser
 					return "fail, illegal move";
 			}
 			else
-			{
 				return "fail, must capture";
-			}
 		}
 		else if (ct == CharacterType.STRATEGIST)
 		{
@@ -178,7 +176,7 @@ class MoveParser extends LineParser
 		}
 	}
 
-	private String tryMove(Piece P, Space oldpos, Space S)
+	private static String tryMove(Piece P, Space oldpos, Space S)
 	{
 
 		if (S.addOccupant(P) == false)
@@ -190,7 +188,7 @@ class MoveParser extends LineParser
 		return "ok, " + P.name() + " to " + S.name();
 	}
 
-	private String tryCapture(Piece P, Space oldpos, Space S)
+	private static String tryCapture(Piece P, Space oldpos, Space S)
 	{
 		Piece oldpiece = S.getOccupant();
 		S.removeOccupant();
@@ -205,7 +203,7 @@ class MoveParser extends LineParser
 				+ S.name();
 	}
 
-	private String tryShoot(Piece P, Space oldpos, Space S)
+	private static String tryShoot(Piece P, Space oldpos, Space S)
 	{
 		Piece oldpiece = S.getOccupant();
 		S.removeOccupant();
@@ -214,7 +212,7 @@ class MoveParser extends LineParser
 				+ S.name();
 	}
 
-	private String tryInspect(Piece P, Space oldpos, Space S)
+	private static String tryInspect(Piece P, Space oldpos, Space S)
 	{
 		Piece oldpiece = S.getOccupant();
 		oldpiece.reveal();
