@@ -10,7 +10,7 @@ public class Piece
 	private static int count = 0;
 	private int index = 0;
 
-	// TODO: isrevealed
+	private boolean isRevealed = false;
 
 	Piece(Empire e, BodyType bt)
 	{
@@ -46,6 +46,15 @@ public class Piece
 		}
 		else
 			C.owner = this;
+	}
+	
+	void reveal()
+	{
+		if (isRevealed)
+			return;
+		
+		System.out.println("\tp" + name() + " reveal " + C.name());
+		isRevealed = true;
 	}
 
 	/* Queries */

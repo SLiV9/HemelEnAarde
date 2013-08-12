@@ -7,6 +7,9 @@ class MoveParser extends LineParser
 
 	String parse(Board B, String arg)
 	{
+		if (arg.length() < 4)
+			return "fail, syntax too short";
+
 		Empire e = Empires.getEmpire(arg.charAt(0));
 		if (e == Empire.INVALID)
 		{
@@ -43,9 +46,10 @@ class MoveParser extends LineParser
 			{
 				if (P.inOpposingCity())
 				{
+					P.reveal();
 					return "ok, player wins!";
 				}
-				
+
 				return "fail, not in opponents city";
 			}
 
@@ -53,14 +57,17 @@ class MoveParser extends LineParser
 		}
 
 		char movetype = 'm';
-		switch (arg.charAt(argpos))
+		if (argpos < arg.length() - 2)
 		{
-		case 'x':
-		case 'q':
-		case 'r':
-			movetype = arg.charAt(argpos);
-			argpos++;
-			break;
+			switch (arg.charAt(argpos))
+			{
+			case 'x':
+			case 'q':
+			case 'r':
+				movetype = arg.charAt(argpos);
+				argpos++;
+				break;
+			}
 		}
 
 		Space S = B.getSpace(arg.substring(argpos));
@@ -76,6 +83,7 @@ class MoveParser extends LineParser
 			{
 				if (P.canMoveX(S))
 				{
+					P.reveal();
 					return tryMove(P, oldpos, S);
 				}
 				else
@@ -85,6 +93,7 @@ class MoveParser extends LineParser
 			{
 				if (P.canCaptureX(S))
 				{
+					P.reveal();
 					return tryCapture(P, oldpos, S);
 				}
 				else
@@ -92,15 +101,16 @@ class MoveParser extends LineParser
 			}
 			else
 			{
-				return "fail, empress must move or capture";
+				return "fail, must move or capture";
 			}
 		}
-		else if (ct == CharacterType.GENERAL)
+		else if (ct == CharacterType.GENERAL || ct == CharacterType.HUNTER)
 		{
 			if (movetype == 'x')
 			{
 				if (P.canCaptureX(S))
 				{
+					P.reveal();
 					return tryCapture(P, oldpos, S);
 				}
 				else
@@ -108,34 +118,19 @@ class MoveParser extends LineParser
 			}
 			else
 			{
-				return "fail, general must capture";
-			}
-		}
-		else if (ct == CharacterType.HUNTER)
-		{
-			if (movetype == 'x')
-			{
-				if (P.canCaptureX(S))
-				{
-					return tryCapture(P, oldpos, S);
-				}
-				else
-					return "fail, illegal move";
-			}
-			else
-			{
-				return "fail, hunter must capture";
+				return "fail, must capture";
 			}
 		}
 		else if (ct == CharacterType.STRATEGIST)
 		{
 			if (movetype != 'q')
 			{
-				return "fail, strategist must inspect";
+				return "fail, must inspect";
 			}
 
 			if (P.canAim(S))
 			{
+				P.reveal();
 				return tryInspect(P, oldpos, S);
 			}
 			else
@@ -145,11 +140,12 @@ class MoveParser extends LineParser
 		{
 			if (movetype != 'r')
 			{
-				return "fail, alchemist must remove";
+				return "fail, must remove";
 			}
 
 			if (P.canAim(S))
 			{
+				P.reveal();
 				return tryShoot(P, oldpos, S);
 			}
 			else
@@ -221,7 +217,7 @@ class MoveParser extends LineParser
 	private String tryInspect(Piece P, Space oldpos, Space S)
 	{
 		Piece oldpiece = S.getOccupant();
-		// TODO: Strategist should reveal something
+		oldpiece.reveal();
 
 		return "ok, " + P.name() + " inspected " + oldpiece.name() + " at "
 				+ S.name();

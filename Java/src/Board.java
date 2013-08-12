@@ -71,6 +71,9 @@ class Board
 
 	Space getSpace(String name)
 	{
+		if (name.length() < 2)
+			return null;
+		
 		int r, c;
 		char a, b;
 		a = name.charAt(0);
