@@ -60,6 +60,11 @@ public class Space
 	{
 		return (type == SpaceType.CITY);
 	}
+	
+	boolean isGate()
+	{
+		return (type == SpaceType.GATE);
+	}
 
 	boolean isPlaceable()
 	{

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.EnumMap;
 
 class Board
@@ -6,16 +7,20 @@ class Board
 	private static final int HEIGHT = 5;
 
 	private Space[][] hex = new Space[2 * HEIGHT + 1][2 * WIDTH + 1];
-	private static EnumMap<Empire, EnumMap<BodyType, Piece>> piecesOnBoard;
+	ArrayList<Space> spacesOnBoard;
+	private EnumMap<Empire, EnumMap<BodyType, Piece>> piecesOnBoard;
 
 	private final boolean southAtBottom = true;
 
 	Board()
 	{
+		spacesOnBoard = new ArrayList<Space>();
+
 		/*
 		 * The rows range from -5 to +5. The columns range from -9 to +9. The
 		 * center, 'f0', is (0, 0). Even rows have even width.
 		 */
+		Space S;
 		for (int r = -HEIGHT; r <= HEIGHT; r++)
 		{
 			int rowwidth = 8;
@@ -26,7 +31,9 @@ class Board
 
 			for (int c = -rowwidth; c <= rowwidth; c += 2)
 			{
-				setHex(r, c, new Space(this, r, c));
+				S = new Space(this, r, c);
+				setHex(r, c, S);
+				spacesOnBoard.add(S);
 			}
 		}
 
@@ -73,7 +80,7 @@ class Board
 	{
 		if (name.length() < 2)
 			return null;
-		
+
 		int r, c;
 		char a, b;
 		a = name.charAt(0);

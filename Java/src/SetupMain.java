@@ -14,6 +14,8 @@ public class SetupMain
 		Character.fillTables();
 		
 		B.print();
+
+		HaeUI H = new HaeUI("HAE Test", B);
 		
 		Scanner sc = new Scanner(System.in);
 		String command, result;
@@ -34,6 +36,7 @@ public class SetupMain
 			if (result.contains("ok"))
 			{
 				B.print();
+				H.repaint();
 			}
 		}
 		
