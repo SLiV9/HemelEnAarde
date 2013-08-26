@@ -380,7 +380,7 @@ class Elephant extends Body
 	}
 
 	/* The Elephant has longer range when attacking. */
-	int attackrange()
+	int attackspeed()
 	{
 		return 4;
 	}
