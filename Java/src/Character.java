@@ -2,6 +2,9 @@ import java.util.Hashtable;
 
 public class Character
 {
+	/* Debugging */
+	protected static boolean showCannots = false;
+	
 	/* Static queriables. */
 	private static Hashtable<String, CharacterType> dictionaryOfTypes;
 
@@ -155,31 +158,36 @@ class Empress extends Character
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!owner.canReach(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
 		// Empress is always noble.
 		if (!S.isGarden())
 		{
-			System.out.println("\t[not garden]");
+			if (showCannots)
+				System.out.println("\t[not garden]");
 			return false;
 		}
 
 		if (S.isOccupied())
 		{
-			System.out.println("\t[occupied]");
+			if (showCannots)
+				System.out.println("\t[occupied]");
 			return false;
 		}
 
@@ -190,31 +198,36 @@ class Empress extends Character
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!owner.canReachAttacking(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
 		// Empress is always noble.
 		if (!S.isGarden())
 		{
-			System.out.println("\t[not garden]");
+			if (showCannots)
+				System.out.println("\t[not garden]");
 			return false;
 		}
 
 		if (!S.isOccupied())
 		{
-			System.out.println("\t[not occupied]");
+			if (showCannots)
+				System.out.println("\t[not occupied]");
 			return false;
 		}
 
@@ -222,13 +235,15 @@ class Empress extends Character
 
 		if (!owner.isOpposing(target))
 		{
-			System.out.println("\t[not opposing]");
+			if (showCannots)
+				System.out.println("\t[not opposing]");
 			return false;
 		}
 
 		if (!owner.isCapable(target))
 		{
-			System.out.println("\t[not capable]");
+			if (showCannots)
+				System.out.println("\t[not capable]");
 			return false;
 		}
 
@@ -257,30 +272,35 @@ class General extends Character
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!owner.canReachAttacking(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
 		if (owner.isIgnoble(S))
 		{
-			System.out.println("\t[ignoble]");
+			if (showCannots)
+				System.out.println("\t[ignoble]");
 			return false;
 		}
 
 		if (!S.isOccupied())
 		{
-			System.out.println("\t[not occupied]");
+			if (showCannots)
+				System.out.println("\t[not occupied]");
 			return false;
 		}
 
@@ -288,7 +308,8 @@ class General extends Character
 
 		if (!owner.isOpposing(target))
 		{
-			System.out.println("\t[not opposing]");
+			if (showCannots)
+				System.out.println("\t[not opposing]");
 			return false;
 		}
 
@@ -319,18 +340,21 @@ class Strategist extends Character
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!owner.canReach(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
@@ -338,7 +362,8 @@ class Strategist extends Character
 
 		if (!S.isOccupied())
 		{
-			System.out.println("\t[not occupied]");
+			if (showCannots)
+				System.out.println("\t[not occupied]");
 			return false;
 		}
 
@@ -346,7 +371,8 @@ class Strategist extends Character
 
 		if (!owner.isOpposing(target))
 		{
-			System.out.println("\t[not opposing]");
+			if (showCannots)
+				System.out.println("\t[not opposing]");
 			return false;
 		}
 
@@ -377,30 +403,35 @@ class Hunter extends Character
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!owner.canReachAttacking(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
 		if (owner.isIgnoble(S))
 		{
-			System.out.println("\t[ignoble]");
+			if (showCannots)
+				System.out.println("\t[ignoble]");
 			return false;
 		}
 
 		if (!S.isOccupied())
 		{
-			System.out.println("\t[not occupied]");
+			if (showCannots)
+				System.out.println("\t[not occupied]");
 			return false;
 		}
 
@@ -408,14 +439,16 @@ class Hunter extends Character
 
 		if (!owner.isOpposing(target))
 		{
-			System.out.println("\t[not opposing]");
+			if (showCannots)
+				System.out.println("\t[not opposing]");
 			return false;
 		}
 
 		// Hunter is capable of capturing Rank 4.
 		if (target.getRank() != 4)
 		{
-			System.out.println("\t[not capable]");
+			if (showCannots)
+				System.out.println("\t[not capable]");
 			return false;
 		}
 
@@ -444,18 +477,21 @@ class Alchemist extends Character
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!owner.position.isAdjacent(S))
 		{
-			System.out.println("\t[not adjacent]");
+			if (showCannots)
+				System.out.println("\t[not adjacent]");
 			return false;
 		}
 
@@ -463,7 +499,8 @@ class Alchemist extends Character
 
 		if (!S.isOccupied())
 		{
-			System.out.println("\t[not occupied]");
+			if (showCannots)
+				System.out.println("\t[not occupied]");
 			return false;
 		}
 
@@ -471,7 +508,8 @@ class Alchemist extends Character
 
 		if (!owner.isOpposing(target))
 		{
-			System.out.println("\t[not opposing]");
+			if (showCannots)
+				System.out.println("\t[not opposing]");
 			return false;
 		}
 

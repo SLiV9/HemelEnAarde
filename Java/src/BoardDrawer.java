@@ -66,7 +66,7 @@ public class BoardDrawer extends JPanel implements MouseListener
 		if (B == null || B.spacesOnBoard == null)
 			return;
 
-		Color cback;
+		Color cback, cring;
 		Polygon hexapol = new Polygon();
 		hexapol.addPoint(0, -2 * hfr);
 		hexapol.addPoint(dw, -hfr);
@@ -104,13 +104,44 @@ public class BoardDrawer extends JPanel implements MouseListener
 					g.setStroke(new BasicStroke(1));
 					g.drawOval(-hgr, -hgr, 2 * hgr, 2 * hgr);
 				}
-				
+
+				cring = null;
 				if (S == selectedS)
 				{
-					g.setColor(Color.blue);
+					cring = Color.blue;
+				}
+
+				if (selectedP != null)
+				{
+					if (selectedP.canMove(S))
+					{
+						cring = Color.green;
+					}
+					else if (selectedP.canCapture(S))
+					{
+						cring = Color.red;
+					}
+					else if (selectedP.canMoveX(S))
+					{
+						cring = Color.pink;
+					}
+					else if (selectedP.canCaptureX(S))
+					{
+						cring = Color.pink;
+					}
+					else if (selectedP.canAim(S))
+					{
+						cring = Color.yellow;
+					}
+				}
+
+				if (cring != null)
+				{
+					g.setColor(cring);
 					g.setStroke(new BasicStroke(6));
 					g.drawOval(-hfr, -hfr, 2 * hfr, 2 * hfr);
 				}
+
 				g.translate(-S.col * dw, -S.row * dh);
 			}
 			else
@@ -249,7 +280,7 @@ public class BoardDrawer extends JPanel implements MouseListener
 				}
 			}
 		}
-		
+
 		if (selectedP != null || selectedS != null)
 		{
 			repaint();

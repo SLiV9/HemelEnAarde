@@ -2,6 +2,9 @@ import java.util.Hashtable;
 
 public class Body
 {
+	/* Debugging */
+	protected static boolean showCannots = false;
+
 	/* Static queriables. */
 	private static Hashtable<String, BodyType> dictionaryOfTypes;
 
@@ -103,7 +106,7 @@ public class Body
 	{
 		return 3;
 	}
-	
+
 	int attackspeed()
 	{
 		return speed();
@@ -119,7 +122,7 @@ public class Body
 	{
 		return canReach(S, speed());
 	}
-	
+
 	boolean canReachAttacking(Space S)
 	{
 		return canReach(S, attackspeed());
@@ -129,24 +132,28 @@ public class Body
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 
 		if (Space.distance(owner.position, S) > spd)
 		{
-			System.out.println("\t[too far]");
+			if (showCannots)
+				System.out.println("\t[too far]");
 			return false;
 		}
 		if (!Space.isStraight(owner.position, S))
 		{
-			System.out.println("\t[not straight]");
+			if (showCannots)
+				System.out.println("\t[not straight]");
 			return false;
 		}
 
 		if (isBlocked(S))
 		{
-			System.out.println("\t[blocked]");
+			if (showCannots)
+				System.out.println("\t[blocked]");
 			return false;
 		}
 
@@ -160,21 +167,21 @@ public class Body
 		if (Space.distance(owner.position, S) <= 1)
 			return false;
 
-		int dr, dc, sr, sc, adc, dbl, opr, opc;
-		opr = owner.position.row;
-		opc = owner.position.col;
-		dr = S.row - opr;
-		dc = S.col - opc;
+		int dr, dc, sr, sc, checklength, colspeed, originr, originc;
+		originr = owner.position.row;
+		originc = owner.position.col;
+		dr = S.row - originr;
+		dc = S.col - originc;
 		sr = Integer.signum(dr);
 		sc = Integer.signum(dc);
-		dbl = 1;
+		colspeed = 1;
 		if (sr == 0)
-			dbl = 2;
-		adc = Math.abs(dc);
+			colspeed = 2;
+		checklength = Math.abs(dc);
 
-		for (int i = dbl; i < adc; i += dbl)
+		for (int i = colspeed; i < checklength; i += colspeed)
 		{
-			if (isBlocked(opr + sr * i, opc + dbl * sc * i))
+			if (isBlocked(originr + sr * i, originc + sc * i))
 				return true;
 		}
 
@@ -187,8 +194,8 @@ public class Body
 		A = owner.platform.getHex(r, c);
 		if (A == null)
 		{
-			System.out.println("{ error: no space at "
-					+ Board.spacename(r, c) + " }");
+			System.out.println("{ error: no space at " + Board.spacename(r, c)
+					+ " }");
 			return true;
 		}
 		if (A.isOccupied())
@@ -204,30 +211,35 @@ public class Body
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!canReach(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
 		if (isIgnoble(S))
 		{
-			System.out.println("\t[ignoble]");
+			if (showCannots)
+				System.out.println("\t[ignoble]");
 			return false;
 		}
 
 		if (S.isOccupied())
 		{
-			System.out.println("\t[occupied]");
+			if (showCannots)
+				System.out.println("\t[occupied]");
 			return false;
 		}
 
@@ -246,30 +258,35 @@ public class Body
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 		if (S.equals(owner.position))
 		{
-			System.out.println("\t[zero movement]");
+			if (showCannots)
+				System.out.println("\t[zero movement]");
 			return false;
 		}
 
 		if (!canReachAttacking(S))
 		{
-			System.out.println("\t[cannot reach]");
+			if (showCannots)
+				System.out.println("\t[cannot reach]");
 			return false;
 		}
 
 		if (isIgnoble(S))
 		{
-			System.out.println("\t[ignoble]");
+			if (showCannots)
+				System.out.println("\t[ignoble]");
 			return false;
 		}
 
 		if (!S.isOccupied())
 		{
-			System.out.println("\t[not occupied]");
+			if (showCannots)
+				System.out.println("\t[not occupied]");
 			return false;
 		}
 
@@ -277,13 +294,15 @@ public class Body
 
 		if (!owner.isOpposing(target))
 		{
-			System.out.println("\t[not opposing]");
+			if (showCannots)
+				System.out.println("\t[not opposing]");
 			return false;
 		}
 
 		if (!isCapable(target))
 		{
-			System.out.println("\t[not capable]");
+			if (showCannots)
+				System.out.println("\t[not capable]");
 			return false;
 		}
 
@@ -460,20 +479,23 @@ class Monkey extends Body
 	{
 		if (!Space.isValid(S))
 		{
-			System.out.println("\t[space invalid]");
+			if (showCannots)
+				System.out.println("\t[space invalid]");
 			return false;
 		}
 
 		if (Space.distance(owner.position, S) > spd)
 		{
-			System.out.println("\t[too far]");
+			if (showCannots)
+				System.out.println("\t[too far]");
 			return false;
 		}
 		// Purposefully removed: isStraight
 
 		if (isBlocked(S))
 		{
-			System.out.println("\t[blocked]");
+			if (showCannots)
+				System.out.println("\t[blocked]");
 			return false;
 		}
 

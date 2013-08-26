@@ -10,7 +10,7 @@ class Board
 	private EnumMap<Empire, EnumMap<BodyType, Piece>> piecesLookup;
 	ArrayList<Space> spacesOnBoard;
 	ArrayList<Piece> piecesOnBoard;
-	Empire empiresOnBoard[] = {Empire.SOUTH, Empire.NORTH};
+	Empire empiresOnBoard[] = { Empire.SOUTH, Empire.NORTH };
 
 	private final boolean southAtBottom = true;
 
@@ -76,6 +76,13 @@ class Board
 
 	Space getHex(int r, int c)
 	{
+		if (r < -HEIGHT || c < -WIDTH || r > HEIGHT || c > WIDTH)
+		{
+			System.out.println("{ Error: getHex call where r=" + r + " and c="
+					+ c + ". }");
+			return null;
+		}
+		
 		return hex[HEIGHT + r][WIDTH + c];
 	}
 
