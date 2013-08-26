@@ -65,12 +65,12 @@ public class BoardDrawer extends JPanel
 
 		Color cback;
 		Polygon hexapol = new Polygon();
-		for (int i = 0; i < 6; i++)
-		{
-			hexapol.addPoint(
-					((int) (Math.round(size * Math.cos((i + 0.5) * FRAC6)))),
-					((int) (Math.round(size * Math.sin((i + 0.5) * FRAC6)))));
-		}
+		hexapol.addPoint(0, -2 * hfr);
+		hexapol.addPoint(dw, -hfr);
+		hexapol.addPoint(dw, +hfr);
+		hexapol.addPoint(0, 2 * hfr);
+		hexapol.addPoint(-dw, +hfr);
+		hexapol.addPoint(-dw, -hfr);
 
 		g.translate(centerx, centery);
 		for (Space S : B.spacesOnBoard)
@@ -148,7 +148,7 @@ public class BoardDrawer extends JPanel
 		FontMetrics fm = g.getFontMetrics();
 		FontRenderContext frc = g.getFontRenderContext();
 		int dx, dy;
-		
+
 		String str;
 		g.translate(centerx, centery);
 		for (Piece P : B.piecesOnBoard)
@@ -174,9 +174,9 @@ public class BoardDrawer extends JPanel
 			g.drawOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
 
 			str = P.image(Empire.SOUTH);
-			dx = (int) (- fm.getStringBounds(str, g).getWidth() / 2);
+			dx = (int) (-fm.getStringBounds(str, g).getWidth() / 2);
 			dy = (fm.getAscent() - fm.getDescent()) / 2;
-			
+
 			g.setColor(Color.black);
 			g.drawString(str, dx, dy);
 			g.translate(-S.col * dw, -S.row * dh);
