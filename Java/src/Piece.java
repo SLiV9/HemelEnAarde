@@ -56,6 +56,12 @@ public class Piece
 		System.out.println("\tp" + name() + " reveal " + C.name());
 		isRevealed = true;
 	}
+	
+	static void setShowCannots(boolean b)
+	{
+		Body.showCannots = b;
+		Character.showCannots = b;
+	}
 
 	/* Queries */
 	boolean canReach(Space S)

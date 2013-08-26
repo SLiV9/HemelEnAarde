@@ -3,7 +3,7 @@ import java.util.Hashtable;
 public class Character
 {
 	/* Debugging */
-	protected static boolean showCannots = false;
+	static boolean showCannots = false;
 	
 	/* Static queriables. */
 	private static Hashtable<String, CharacterType> dictionaryOfTypes;

@@ -17,6 +17,11 @@ public class BoardDrawer extends JPanel implements MouseListener
 	static final Color C_GARDEN = new Color(170, 200, 170);
 	static final Color C_SOUTH = new Color(220, 50, 50);
 	static final Color C_NORTH = new Color(50, 200, 50);
+	static final Color C_MOVE = new Color(130, 190, 220);
+	static final Color C_MOVEX = new Color(200, 50, 210);
+	static final Color C_CAPTURE = new Color(240, 180, 130);
+	static final Color C_CAPTUREX = new Color(240, 130, 250);
+	static final Color C_AIM = new Color(240, 130, 250);
 
 	private int centerx, centery, boardwh;
 	private int hfr, hgr, dw, dh, diskr;
@@ -57,13 +62,12 @@ public class BoardDrawer extends JPanel implements MouseListener
 		g.fillRect(centerx - boardwh, centery - boardwh, 2 * boardwh,
 				2 * boardwh);
 
-		drawSpaces(g);
-		drawPieces(g);
+		drawBoard(g);
 	}
 
-	private void drawSpaces(Graphics2D g)
+	private void drawBoard(Graphics2D g)
 	{
-		if (B == null || B.spacesOnBoard == null)
+		if (B == null || B.spacesOnBoard == null || B.piecesOnBoard == null)
 			return;
 
 		Color cback, cring;
@@ -75,7 +79,15 @@ public class BoardDrawer extends JPanel implements MouseListener
 		hexapol.addPoint(-dw, +hfr);
 		hexapol.addPoint(-dw, -hfr);
 
+		Font fnt = new Font("Times New Roman", Font.BOLD, 24);
+		g.setFont(fnt);
+		FontMetrics fm = g.getFontMetrics();
+		int dx, dy;
+		String str;
+
 		g.translate(centerx, centery);
+
+		/* DRAWBOARD: SPACES */
 		for (Space S : B.spacesOnBoard)
 		{
 			if (Space.isValid(S))
@@ -105,43 +117,6 @@ public class BoardDrawer extends JPanel implements MouseListener
 					g.drawOval(-hgr, -hgr, 2 * hgr, 2 * hgr);
 				}
 
-				cring = null;
-				if (S == selectedS)
-				{
-					cring = Color.blue;
-				}
-
-				if (selectedP != null)
-				{
-					if (selectedP.canMove(S))
-					{
-						cring = Color.green;
-					}
-					else if (selectedP.canCapture(S))
-					{
-						cring = Color.red;
-					}
-					else if (selectedP.canMoveX(S))
-					{
-						cring = Color.pink;
-					}
-					else if (selectedP.canCaptureX(S))
-					{
-						cring = Color.pink;
-					}
-					else if (selectedP.canAim(S))
-					{
-						cring = Color.yellow;
-					}
-				}
-
-				if (cring != null)
-				{
-					g.setColor(cring);
-					g.setStroke(new BasicStroke(6));
-					g.drawOval(-hfr, -hfr, 2 * hfr, 2 * hfr);
-				}
-
 				g.translate(-S.col * dw, -S.row * dh);
 			}
 			else
@@ -149,48 +124,8 @@ public class BoardDrawer extends JPanel implements MouseListener
 				System.out.println("Invalid space.");
 			}
 		}
-		for (Space S : B.spacesOnBoard)
-		{
-			if (Space.isValid(S))
-			{
-				g.translate(S.col * dw, S.row * dh);
-				if (S.isGarden() || S.isCity())
-				{
-					g.setColor(Color.darkGray);
-					g.setStroke(new BasicStroke(2));
-					g.drawPolygon(hexapol);
-				}
-				else
-				{
-					g.setColor(Color.darkGray);
-					g.setStroke(new BasicStroke(1));
-					g.drawPolygon(hexapol);
-				}
-				g.translate(-S.col * dw, -S.row * dh);
-			}
-			else
-			{
-				System.out.println("Invalid space.");
-			}
-		}
-		g.translate(-centerx, -centery);
-	}
 
-	private void drawPieces(Graphics2D g)
-	{
-		if (B == null || B.piecesOnBoard == null)
-		{
-			return;
-		}
-
-		Color cback;
-		Font fnt = new Font("Times New Roman", Font.BOLD, 24);
-		g.setFont(fnt);
-		FontMetrics fm = g.getFontMetrics();
-		int dx, dy;
-
-		String str;
-		g.translate(centerx, centery);
+		/* DRAWBOARD: PIECES */
 		for (Piece P : B.piecesOnBoard)
 		{
 			switch (P.getEmpire())
@@ -229,6 +164,73 @@ public class BoardDrawer extends JPanel implements MouseListener
 			g.drawString(str, dx, dy);
 			g.translate(-S.col * dw, -S.row * dh);
 		}
+
+		/* DRAWBOARD: EDGES AND RINGS */
+		Piece.setShowCannots(false);
+		for (Space S : B.spacesOnBoard)
+		{
+			if (Space.isValid(S))
+			{
+				g.translate(S.col * dw, S.row * dh);
+				if (S.isGarden() || S.isCity())
+				{
+					g.setColor(Color.darkGray);
+					g.setStroke(new BasicStroke(2));
+					g.drawPolygon(hexapol);
+				}
+				else
+				{
+					g.setColor(Color.darkGray);
+					g.setStroke(new BasicStroke(1));
+					g.drawPolygon(hexapol);
+				}
+
+				cring = null;
+				if (S == selectedS)
+				{
+					cring = Color.blue;
+				}
+
+				if (selectedP != null && Space.isValid(selectedP.position))
+				{
+					if (selectedP.canMove(S))
+					{
+						cring = C_MOVE;
+					}
+					else if (selectedP.canCapture(S))
+					{
+						cring = C_CAPTURE;
+					}
+					else if (selectedP.canMoveX(S))
+					{
+						cring = C_MOVEX;
+					}
+					else if (selectedP.canCaptureX(S))
+					{
+						cring = C_CAPTUREX;
+					}
+					else if (selectedP.canAim(S))
+					{
+						cring = C_AIM;
+					}
+				}
+
+				if (cring != null)
+				{
+					g.setColor(cring);
+					g.setStroke(new BasicStroke(6));
+					g.drawOval(-hfr, -hfr, 2 * hfr, 2 * hfr);
+				}
+
+				g.translate(-S.col * dw, -S.row * dh);
+			}
+			else
+			{
+				System.out.println("Invalid space.");
+			}
+		}
+
+		/* DRAWBOARD: END */
 		g.translate(-centerx, -centery);
 	}
 

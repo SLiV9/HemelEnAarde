@@ -77,6 +77,7 @@ class MoveParser extends LineParser
 		}
 
 		/* Interpret move */
+		Piece.setShowCannots(true);
 		if (ct == CharacterType.EMPRESS)
 		{
 			if (movetype == 'm')
