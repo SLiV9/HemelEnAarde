@@ -1,11 +1,10 @@
 import javax.swing.JPanel;
 
 import java.awt.*;
-import java.awt.font.FontRenderContext;
-import java.awt.font.TextLayout;
-import java.awt.geom.AffineTransform;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class BoardDrawer extends JPanel
+public class BoardDrawer extends JPanel implements MouseListener
 {
 	private static final long serialVersionUID = 1L;
 
@@ -20,7 +19,10 @@ public class BoardDrawer extends JPanel
 	static final Color C_NORTH = new Color(50, 200, 50);
 
 	private int centerx, centery, boardwh;
-	private int hfr, hgr, dw, dh, size, diskr;
+	private int hfr, hgr, dw, dh, diskr;
+
+	private Space selectedS;
+	private Piece selectedP;
 
 	Board B;
 
@@ -29,6 +31,8 @@ public class BoardDrawer extends JPanel
 		B = b;
 
 		setPreferredSize(new Dimension(400, 400));
+
+		addMouseListener(this);
 	}
 
 	public void paint(Graphics gg)
@@ -49,7 +53,6 @@ public class BoardDrawer extends JPanel
 		hgr = hfr * 3 / 4;
 		dw = (int) (hfr * BoardDrawer.SQRT3);
 		dh = 3 * hfr;
-		size = 2 * hfr;
 		diskr = hfr * 3 / 2;
 		g.fillRect(centerx - boardwh, centery - boardwh, 2 * boardwh,
 				2 * boardwh);
@@ -101,6 +104,13 @@ public class BoardDrawer extends JPanel
 					g.setStroke(new BasicStroke(1));
 					g.drawOval(-hgr, -hgr, 2 * hgr, 2 * hgr);
 				}
+				
+				if (S == selectedS)
+				{
+					g.setColor(Color.blue);
+					g.setStroke(new BasicStroke(6));
+					g.drawOval(-hfr, -hfr, 2 * hfr, 2 * hfr);
+				}
 				g.translate(-S.col * dw, -S.row * dh);
 			}
 			else
@@ -146,7 +156,6 @@ public class BoardDrawer extends JPanel
 		Font fnt = new Font("Times New Roman", Font.BOLD, 24);
 		g.setFont(fnt);
 		FontMetrics fm = g.getFontMetrics();
-		FontRenderContext frc = g.getFontRenderContext();
 		int dx, dy;
 
 		String str;
@@ -169,8 +178,16 @@ public class BoardDrawer extends JPanel
 			g.translate(S.col * dw, S.row * dh);
 			g.setColor(cback);
 			g.fillOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
-			g.setColor(Color.black);
-			g.setStroke(new BasicStroke(3));
+			if (P == selectedP)
+			{
+				g.setColor(Color.blue);
+				g.setStroke(new BasicStroke(4));
+			}
+			else
+			{
+				g.setColor(Color.black);
+				g.setStroke(new BasicStroke(3));
+			}
 			g.drawOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
 
 			str = P.image(Empire.SOUTH);
@@ -182,5 +199,64 @@ public class BoardDrawer extends JPanel
 			g.translate(-S.col * dw, -S.row * dh);
 		}
 		g.translate(-centerx, -centery);
+	}
+
+	/* Mouse Listening */
+	public void mouseClicked(MouseEvent me)
+	{
+	}
+
+	public void mouseEntered(MouseEvent me)
+	{
+	}
+
+	public void mouseExited(MouseEvent me)
+	{
+	}
+
+	public void mousePressed(MouseEvent me)
+	{
+		int mousex, mousey;
+		mousex = me.getX();
+		mousey = me.getY();
+
+		selectedS = null;
+		selectedP = null;
+
+		if (mousex < centerx - boardwh || mousex > centerx + boardwh
+				|| mousey < centery - boardwh || mousey > centery + boardwh)
+		{
+			return;
+		}
+
+		int sx, sy, dx, dy;
+		for (Space S : B.spacesOnBoard)
+		{
+			sx = centerx + S.col * dw;
+			sy = centery + S.row * dh;
+			dx = mousex - sx;
+			dy = mousey - sy;
+
+			if (dx * dx + dy * dy < diskr * diskr)
+			{
+				if (S.isOccupied())
+				{
+					selectedP = S.getOccupant();
+				}
+				else
+				{
+					selectedS = S;
+				}
+			}
+		}
+		
+		if (selectedP != null || selectedS != null)
+		{
+			repaint();
+		}
+	}
+
+	public void mouseReleased(MouseEvent me)
+	{
 	}
 }
