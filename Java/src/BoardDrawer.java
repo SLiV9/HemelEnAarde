@@ -1,6 +1,9 @@
 import javax.swing.JPanel;
 
 import java.awt.*;
+import java.awt.font.FontRenderContext;
+import java.awt.font.TextLayout;
+import java.awt.geom.AffineTransform;
 
 public class BoardDrawer extends JPanel
 {
@@ -89,15 +92,13 @@ public class BoardDrawer extends JPanel
 				g.translate(S.col * dw, S.row * dh);
 				g.setColor(cback);
 				g.fillPolygon(hexapol);
-				g.setColor(Color.darkGray);
-				g.setStroke(new BasicStroke(2));
-				g.drawPolygon(hexapol);
 
 				if (S.isGate())
 				{
 					g.setColor(C_CITY);
 					g.fillOval(-hgr, -hgr, 2 * hgr, 2 * hgr);
 					g.setColor(Color.darkGray);
+					g.setStroke(new BasicStroke(1));
 					g.drawOval(-hgr, -hgr, 2 * hgr, 2 * hgr);
 				}
 				g.translate(-S.col * dw, -S.row * dh);
@@ -111,14 +112,20 @@ public class BoardDrawer extends JPanel
 		{
 			if (Space.isValid(S))
 			{
+				g.translate(S.col * dw, S.row * dh);
 				if (S.isGarden() || S.isCity())
 				{
-					g.translate(S.col * dw, S.row * dh);
 					g.setColor(Color.darkGray);
-					g.setStroke(new BasicStroke(4));
+					g.setStroke(new BasicStroke(2));
 					g.drawPolygon(hexapol);
-					g.translate(-S.col * dw, -S.row * dh);
 				}
+				else
+				{
+					g.setColor(Color.darkGray);
+					g.setStroke(new BasicStroke(1));
+					g.drawPolygon(hexapol);
+				}
+				g.translate(-S.col * dw, -S.row * dh);
 			}
 			else
 			{
@@ -136,7 +143,13 @@ public class BoardDrawer extends JPanel
 		}
 
 		Color cback;
-
+		Font fnt = new Font("Times New Roman", Font.BOLD, 24);
+		g.setFont(fnt);
+		FontMetrics fm = g.getFontMetrics();
+		FontRenderContext frc = g.getFontRenderContext();
+		int dx, dy;
+		
+		String str;
 		g.translate(centerx, centery);
 		for (Piece P : B.piecesOnBoard)
 		{
@@ -157,9 +170,16 @@ public class BoardDrawer extends JPanel
 			g.setColor(cback);
 			g.fillOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
 			g.setColor(Color.black);
-			g.setStroke(new BasicStroke(2));
+			g.setStroke(new BasicStroke(3));
 			g.drawOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
-			g.translate(-S.col * dw, - S.row * dh);
+
+			str = P.image(Empire.SOUTH);
+			dx = (int) (- fm.getStringBounds(str, g).getWidth() / 2);
+			dy = (fm.getAscent() - fm.getDescent()) / 2;
+			
+			g.setColor(Color.black);
+			g.drawString(str, dx, dy);
+			g.translate(-S.col * dw, -S.row * dh);
 		}
 		g.translate(-centerx, -centery);
 	}

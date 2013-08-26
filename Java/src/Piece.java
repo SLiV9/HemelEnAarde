@@ -138,6 +138,18 @@ public class Piece
 	{
 		return "" + Empires.initial(E) + B.initial() + C.initial();
 	}
+	
+	String image(Empire e)
+	{
+		if (isRevealed || E == e)
+		{
+			return "" + B.initial() + C.initial();
+		}
+		else
+		{
+			return "" + B.initial();
+		}
+	}
 
 	String name()
 	{
