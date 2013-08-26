@@ -58,16 +58,16 @@ class Board
 	{
 		if (southAtBottom)
 		{
-			if (S.row < 0 && e == Empire.SOUTH)
+			if (S.row > 0 && e == Empire.SOUTH)
 				return true;
-			else if (S.row > 0 && e == Empire.NORTH)
+			else if (S.row < 0 && e == Empire.NORTH)
 				return true;
 		}
 		else
 		{
-			if (S.row > 0 && e == Empire.SOUTH)
+			if (S.row < 0 && e == Empire.SOUTH)
 				return true;
-			else if (S.row < 0 && e == Empire.NORTH)
+			else if (S.row > 0 && e == Empire.NORTH)
 				return true;
 		}
 
@@ -91,13 +91,13 @@ class Board
 
 		if (a >= 'a' && a <= 'k' && b >= '0' && b <= '9')
 		{
-			r = a - 'f';
+			r = 'f' - a;
 			c = b - '0';
 			return getHex(r, c);
 		}
 		else if (b >= 'a' && b <= 'k' && a >= '0' && a <= '9')
 		{
-			r = b - 'f';
+			r = 'f' - b;
 			c = '0' - a;
 			return getHex(r, c);
 		}
@@ -109,11 +109,11 @@ class Board
 	{
 		if (c >= 0)
 		{
-			return "" + ((char) ('f' + r)) + ((char) ('0' + c));
+			return "" + ((char) ('f' - r)) + ((char) ('0' + c));
 		}
 		else
 		{
-			return "" + ((char) ('0' - c)) + ((char) ('f' + r));
+			return "" + ((char) ('0' - c)) + ((char) ('f' - r));
 		}
 	}
 
@@ -182,7 +182,7 @@ class Board
 		Space S;
 
 		System.out.println("{{");
-		for (int r = 2 * HEIGHT; r >= 0; r--)
+		for (int r = 0; r <= 2 * HEIGHT; r++)
 		{
 			System.out.print("[ ");
 			for (int c = 0; c < 2 * WIDTH + 1; c++)

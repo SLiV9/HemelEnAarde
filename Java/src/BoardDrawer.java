@@ -114,7 +114,7 @@ public class BoardDrawer extends JPanel
 				if (S.isGarden() || S.isCity())
 				{
 					g.translate(S.col * dw, S.row * dh);
-					g.setColor(Color.black);
+					g.setColor(Color.darkGray);
 					g.setStroke(new BasicStroke(4));
 					g.drawPolygon(hexapol);
 					g.translate(-S.col * dw, -S.row * dh);
@@ -157,6 +157,7 @@ public class BoardDrawer extends JPanel
 			g.setColor(cback);
 			g.fillOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
 			g.setColor(Color.black);
+			g.setStroke(new BasicStroke(2));
 			g.drawOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
 			g.translate(-S.col * dw, - S.row * dh);
 		}
