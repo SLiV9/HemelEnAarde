@@ -7,14 +7,17 @@ class Board
 	private static final int HEIGHT = 5;
 
 	private Space[][] hex = new Space[2 * HEIGHT + 1][2 * WIDTH + 1];
+	private EnumMap<Empire, EnumMap<BodyType, Piece>> piecesLookup;
 	ArrayList<Space> spacesOnBoard;
-	private EnumMap<Empire, EnumMap<BodyType, Piece>> piecesOnBoard;
+	ArrayList<Piece> piecesOnBoard;
+	Empire empiresOnBoard[] = {Empire.SOUTH, Empire.NORTH};
 
 	private final boolean southAtBottom = true;
 
 	Board()
 	{
 		spacesOnBoard = new ArrayList<Space>();
+		piecesOnBoard = new ArrayList<Piece>();
 
 		/*
 		 * The rows range from -5 to +5. The columns range from -9 to +9. The
@@ -37,11 +40,11 @@ class Board
 			}
 		}
 
-		piecesOnBoard = new EnumMap<Empire, EnumMap<BodyType, Piece>>(
+		piecesLookup = new EnumMap<Empire, EnumMap<BodyType, Piece>>(
 				Empire.class);
-		piecesOnBoard.put(Empire.SOUTH, new EnumMap<BodyType, Piece>(
+		piecesLookup.put(Empire.SOUTH, new EnumMap<BodyType, Piece>(
 				BodyType.class));
-		piecesOnBoard.put(Empire.NORTH, new EnumMap<BodyType, Piece>(
+		piecesLookup.put(Empire.NORTH, new EnumMap<BodyType, Piece>(
 				BodyType.class));
 	}
 
@@ -117,7 +120,7 @@ class Board
 	/* Pieces on board */
 	Piece findPiece(Empire e, BodyType bt)
 	{
-		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(e);
+		EnumMap<BodyType, Piece> poe = piecesLookup.get(e);
 		if (poe == null)
 		{
 			return null;
@@ -131,7 +134,7 @@ class Board
 		if (P == null)
 			return false;
 
-		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(P.getEmpire());
+		EnumMap<BodyType, Piece> poe = piecesLookup.get(P.getEmpire());
 		if (poe != null)
 		{
 			Piece oldp = poe.get(P.getBodyType());
@@ -141,6 +144,7 @@ class Board
 			}
 
 			poe.put(P.getBodyType(), P);
+			piecesOnBoard.add(P);
 		}
 
 		return true;
@@ -156,7 +160,7 @@ class Board
 
 	void removePiece(Empire e, BodyType bt)
 	{
-		EnumMap<BodyType, Piece> poe = piecesOnBoard.get(e);
+		EnumMap<BodyType, Piece> poe = piecesLookup.get(e);
 		if (poe != null)
 		{
 			Piece P = poe.get(bt);
@@ -168,6 +172,7 @@ class Board
 			}
 
 			poe.remove(bt);
+			piecesOnBoard.remove(P);
 		}
 	}
 
