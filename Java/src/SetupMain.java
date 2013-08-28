@@ -15,7 +15,7 @@ public class SetupMain
 		
 		B.print();
 
-		HaeUI H = new HaeUI("HAE Test", B);
+		HaeUI H = new HaeUI("HAE Test", B, LP);
 		
 		Scanner sc = new Scanner(System.in);
 		String command, result;
