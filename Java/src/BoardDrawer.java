@@ -17,6 +17,7 @@ public class BoardDrawer extends JPanel implements MouseListener
 	static final Color C_GARDEN = new Color(170, 200, 170);
 	static final Color C_SOUTH = new Color(220, 50, 50);
 	static final Color C_NORTH = new Color(50, 200, 50);
+	static final Color C_SELECTED = new Color(50, 50, 240);
 	static final Color C_MOVE = new Color(130, 190, 220);
 	static final Color C_MOVEX = new Color(200, 50, 210);
 	static final Color C_CAPTURE = new Color(240, 180, 130);
@@ -81,7 +82,13 @@ public class BoardDrawer extends JPanel implements MouseListener
 		hexapol.addPoint(-dw, +hfr);
 		hexapol.addPoint(-dw, -hfr);
 
-		Font fnt = new Font("Times New Roman", Font.BOLD, 24);
+		Font fnt;
+		if (hfr < 10)
+			fnt = new Font("Corbel", Font.PLAIN, 10);
+		else if (hfr < 20)
+			fnt = new Font("Last Ninja", Font.PLAIN, 18);
+		else
+			fnt = new Font("Last Ninja", Font.PLAIN, 30);
 		g.setFont(fnt);
 		FontMetrics fm = g.getFontMetrics();
 		int dx, dy;
@@ -141,6 +148,7 @@ public class BoardDrawer extends JPanel implements MouseListener
 			default:
 				cback = Color.pink;
 			}
+			cring = cback.darker();
 
 			Space S = P.position;
 			g.translate(S.col * dw, S.row * dh);
@@ -148,22 +156,15 @@ public class BoardDrawer extends JPanel implements MouseListener
 			g.fillOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
 			if (P == selectedP)
 			{
-				g.setColor(Color.blue);
+				g.setColor(C_SELECTED);
 				g.setStroke(new BasicStroke(4));
 			}
 			else
 			{
-				g.setColor(Color.black);
-				g.setStroke(new BasicStroke(3));
+				g.setColor(cring);
+				g.setStroke(new BasicStroke(4));
 			}
 			g.drawOval(-diskr, -diskr, 2 * diskr, 2 * diskr);
-
-			str = P.image(Empire.SOUTH);
-			dx = (int) (-fm.getStringBounds(str, g).getWidth() / 2);
-			dy = (fm.getAscent() - fm.getDescent()) / 2;
-
-			g.setColor(Color.black);
-			g.drawString(str, dx, dy);
 			g.translate(-S.col * dw, -S.row * dh);
 		}
 
@@ -190,7 +191,7 @@ public class BoardDrawer extends JPanel implements MouseListener
 				cring = null;
 				if (S == selectedS)
 				{
-					cring = Color.blue;
+					cring = C_SELECTED;
 				}
 
 				if (selectedP != null && Space.isValid(selectedP.position))
@@ -246,6 +247,21 @@ public class BoardDrawer extends JPanel implements MouseListener
 			{
 				System.out.println("Invalid space.");
 			}
+		}
+		
+		/* DRAWBOARD: PIECES ICONS */
+
+		for (Piece P : B.piecesOnBoard)
+		{
+			Space S = P.position;
+			g.translate(S.col * dw, S.row * dh);
+			str = P.image(Empire.SOUTH);
+			dx = (int) (-fm.getStringBounds(str, g).getWidth() / 2);
+			dy = (fm.getAscent() - fm.getDescent()) / 2;
+	
+			g.setColor(Color.black);
+			g.drawString(str, dx, dy);
+			g.translate(-S.col * dw, -S.row * dh);
 		}
 
 		/* DRAWBOARD: END */
