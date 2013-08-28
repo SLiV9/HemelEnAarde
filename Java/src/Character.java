@@ -376,6 +376,13 @@ class Strategist extends Character
 			return false;
 		}
 
+		if (target.isKnown(owner.getEmpire()))
+		{
+			if (showCannots)
+				System.out.println("\t[already known]");
+			return false;
+		}
+
 		// Strategist is always capable.
 
 		return true;

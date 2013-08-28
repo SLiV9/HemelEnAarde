@@ -21,10 +21,11 @@ public class BoardDrawer extends JPanel implements MouseListener
 	static final Color C_MOVEX = new Color(200, 50, 210);
 	static final Color C_CAPTURE = new Color(240, 180, 130);
 	static final Color C_CAPTUREX = new Color(240, 130, 250);
-	static final Color C_AIM = new Color(240, 130, 250);
+	static final Color C_REMOVE = new Color(240, 130, 250);
+	static final Color C_INSPECT = new Color(220, 220, 220);
 
 	private int centerx, centery, boardwh;
-	private int hfr, hgr, dw, dh, diskr;
+	private int hfr, hgr, hxr, dw, dh, diskr;
 
 	private Space selectedS;
 	private Piece selectedP;
@@ -56,6 +57,7 @@ public class BoardDrawer extends JPanel implements MouseListener
 		boardwh = Math.min(getWidth(), getHeight()) * 9 / 20;
 		hfr = Math.min(getWidth(), getHeight()) / 40;
 		hgr = hfr * 3 / 4;
+		hxr = hfr / 3;
 		dw = (int) (hfr * BoardDrawer.SQRT3);
 		dh = 3 * hfr;
 		diskr = hfr * 3 / 2;
@@ -209,10 +211,6 @@ public class BoardDrawer extends JPanel implements MouseListener
 					{
 						cring = C_CAPTUREX;
 					}
-					else if (selectedP.canAim(S))
-					{
-						cring = C_AIM;
-					}
 				}
 
 				if (cring != null)
@@ -220,6 +218,26 @@ public class BoardDrawer extends JPanel implements MouseListener
 					g.setColor(cring);
 					g.setStroke(new BasicStroke(6));
 					g.drawOval(-hfr, -hfr, 2 * hfr, 2 * hfr);
+				}
+
+				if (selectedP != null && Space.isValid(selectedP.position))
+				{
+					if (selectedP.canAim(S))
+					{
+						switch (selectedP.getCharacterType())
+						{
+						case STRATEGIST:
+							g.setColor(C_INSPECT);
+							g.fillRect(hfr / 2, -1 * hxr, 2 * hxr, 2 * hxr);
+							break;
+						case ALCHEMIST:
+							g.setColor(C_REMOVE);
+							g.setStroke(new BasicStroke(8));
+							g.drawLine(2 * hxr, 0, 4 * hxr, 2 * hxr);
+							g.drawLine(4 * hxr, 0, 2 * hxr, 2 * hxr);
+							break;
+						}
+					}
 				}
 
 				g.translate(-S.col * dw, -S.row * dh);

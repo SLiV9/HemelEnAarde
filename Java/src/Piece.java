@@ -124,6 +124,11 @@ public class Piece
 		return (position.isCity() && platform.inEmpiresHalf(position,
 				Empires.opponent(E)));
 	}
+	
+	boolean isKnown(Empire e)
+	{
+		return (E == e || isRevealed);
+	}
 
 	BodyType getBodyType()
 	{
@@ -147,7 +152,7 @@ public class Piece
 	
 	String image(Empire e)
 	{
-		if (isRevealed || E == e)
+		if (isKnown(e))
 		{
 			return "" + B.initial() + C.initial();
 		}
