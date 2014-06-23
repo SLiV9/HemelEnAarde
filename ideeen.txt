@@ -1,0 +1,28 @@
+Aan het begin schud de tegenstander je lichamen en jijzelf je karakters, zodat het random is. Je mag zelf je karakters bekijken en twee stukken van karakters verwisselen.
+
+Om dit beter te laten werken is het leuk als alle lichamen met alle karakters werken. Ihb moeten Nachtegaal Keizerin en Olifant Jager etc ook nuttig zijn.
+
+
+
+Keizerin:
+Is altijd nobel, en kan elk stuk in de Tuin slaan. Dat wil zeggne, als een stuk in de Tuin staat en de Keizerin kan 'm bereiken, dan kan ze hem slaan, ongeacht rang (en ongeacht Draak/Nachtegaal).
+
+
+
+Strateeg:
+Voordat de Strateeg een zet doet kan hij zich tonen om een vijandelijk stuk dat hij kan bereiken, te bekijken.
+
+
+
+Jager:
+Als de Jager in een rechte lijn een stuk slaat en het volgende veld is leeg, mag hij naar dat veld bewegen (zelfs als dat voorbij zijn bereik is). I.h.b. kan de Olifant zo 5 velden bewegen (en een stuk slaan) en kan de Panda 2 velden bewegen (en een stuk slaan). De Aap kan dit alleen in rechte lijnen doen om zo 3 velden te bewegen.
+
+Of: de Jager kan in een rechte lijn over een stuk heenspringen om het te slaan, met +1 aanvalsbereik. Dus hetzelfde als hierboven, maar
+	Jager | Vijand | _ | _ | _
+	_ | x | _ | _ | Jager
+kan ook. Maar je mag met je +1 aanvalsbereik niet precies op iemand terecht komen, uiteraard. (De reden voor +1 aanvalsbereik is vooral dat de Panda er iets aan heeft.)
+
+Of: met vast aanvalsbereik 2 over een stuk heenspringen om het te slaan. Dus altijd 
+	Jager | Vijand | _
+	_ | x | Jager
+Ook wel geinig. (Naam nog zinnig?)
